@@ -1,5 +1,5 @@
 # Idea
-We're building an online record store. User's will be able to browse products and add them to a cart. Users will be able to checkout and purchase products from the store. We'll be using React, Gatsby, Shopify, and Storefront API.
+We're building an online record store. User's will be able to browse products and add them to a cart. Users will be able to checkout and purchase products from the store. We'll be using React, Stripe, and Mongo. 
 
 # Initial Work Distribution
 - Who is front end : Josh 
