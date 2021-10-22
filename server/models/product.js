@@ -6,7 +6,6 @@ const productSchema = new Schema(
     {
         title: {
             type: String,
-            trim: true,
             required: true,
         },
         price: {
@@ -15,12 +14,15 @@ const productSchema = new Schema(
         },
         description: {
             type: String,
-            trim: true,
             required: true
         },
-        img: {
-            data: Buffer, 
-            contentType: String
+        image: {
+            type:String
+        },
+        genre: {
+            type: Schema.Types.ObjectId,
+            ref: 'Genre',
+            required: true
         }
     }
 );
