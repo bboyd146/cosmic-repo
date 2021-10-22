@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const db = require('./config/connection');
 const { ApolloServer } = require('apollo-server-express');
 // const graphqlHTTP = require('express-graphql');
 // const schema = require('./schema/schema');
