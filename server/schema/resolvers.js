@@ -1,17 +1,55 @@
 const { AuthenticationError } = require("apollo-server-errors");
-const { User } = require("../models");
+const { User, Product, Genre, Order } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
-        me: async (parent, args, context) => {
+        user: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id }).select(
-                    "-__v -password"
-                );
-                return userData;
+                const user = await User.findById(context.user._id).populate({
+                    path: 'orders.products',
+                    populate: 'genre'
+                });
+
+                user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+                return user;
             }
-            throw new AuthenticationError("Not logged in");
+
+            throw new AuthenticationError('Not logged in');
+        },
+        genres: async () => {
+            return await Genre.find();
+        },
+        products: async (parent, { genre, name }) => {
+            const params = {};
+
+            if (genre) {
+                params.genre = genre;
+            }
+
+            if (name) {
+                params.name = {
+                    $regex: name
+                };
+            }
+
+            return await Product.find(params).populate('genre');
+        },
+        product: async (parent, { _id }) => {
+            return await Product.findById(_id).populate('genre');
+        },
+        order: async (parent, { _id }, context) => {
+            if (context.user) {
+                const user = await User.findById(context.user._id).populate({
+                    path: 'orders.products',
+                    populate: 'genre'
+                });
+
+                return user.orders.id(_id);
+            }
+
+            throw new AuthenticationError('Not logged in');
         },
     },
     Mutation: {
