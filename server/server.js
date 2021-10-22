@@ -1,9 +1,8 @@
 const express = require("express");
 const db = require('./config/connection');
 const { ApolloServer } = require('apollo-server-express');
-// const graphqlHTTP = require('express-graphql');
-// const schema = require('./schema/schema');
-
+const { authMiddleware } = require("./utils/auth");
+const { typeDefs, resolvers } = require('./schema');
 
 const PORT = process.env.PORT || 3006
 const app = express();
