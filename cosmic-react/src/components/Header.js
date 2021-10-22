@@ -1,3 +1,5 @@
+import { FaShoppingCart } from "react-icons/fa";
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -25,7 +27,7 @@ const Header = () => {
                             <Link to="/inventory">Inventory</Link>
                         </li>
                         <li>
-                            <Link to="/cart">Cart</Link>
+                            <Link to="/cart"><FaShoppingCart/></Link>
                         </li>
                     </ul>
 
