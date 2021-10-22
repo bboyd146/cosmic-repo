@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const orderSchema = require('./Order');
+const Order = require('./Order');
 
 const userSchema = new Schema({
   firstName: {
@@ -25,19 +25,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-    // set orderSchema to be an array of data that adheres to the bookSchema
-    orders: [orderSchema],
-  },
-  // set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
-    },
-  }
-);
+  orders: [Order.schema],
+});
 
 // set up pre-save middleware to create password
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -47,7 +39,7 @@ userSchema.pre('save', async function(next) {
 });
 
 // compare the incoming password with the hashed password
-userSchema.methods.isCorrectPassword = async function(password) {
+userSchema.methods.isCorrectPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
