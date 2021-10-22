@@ -1,8 +1,9 @@
 const express = require("express");
-const mongoose = require("mongoose");
-// const graphqlHTTP = require('express-graphql');
-// const schema = require('./schema/schema');
-
+const db = require('./config/connection');
+const { ApolloServer } = require('apollo-server-express');
+const { authMiddleware } = require("./utils/auth");
+const { typeDefs, resolvers } = require('./schema');
+const path = require('path');
 
 const PORT = process.env.PORT || 3006
 const app = express();
@@ -11,25 +12,32 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
-// app.use('/graphql', graphqlHTTP({
-//     schema,
-//     graphiql: true 
-// }));
+const startApolloServer = async () => {
+    const server = new ApolloServer({
+        typeDefs,
+        resolvers,
+        context: authMiddleware,
+    });
 
-// mongoose.connect(
-//     process.env.MONGODB_URI || 'mongodb://localhost/cosmic',
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         useCreateIndex: true,
-//         useFindAndModify: false
-//     }
-// );
+    await server.start();
 
-// routes
-// app.use(require("./routes/api.js"));
+    server.applyMiddleware({ app });
 
-app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
+    app.listen(PORT, () => {
+        console.log(`🌍 Now listening on localhost:${PORT}`);
+        console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    });
+}
+
+
+// if we're in production, serve client/build as static assets
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+}
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+db.once('open', () => {
+    startApolloServer();
 });
