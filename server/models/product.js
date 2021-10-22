@@ -11,13 +11,19 @@ const productSchema = new Schema(
         price: {
             type: Number,
             required: true,
+            min: 0.99
+        },
+        quantity: {
+            type: Number,
+            min: 0,
+            default: 0
         },
         description: {
             type: String,
             required: true
         },
         image: {
-            type:String
+            type: String
         },
         genre: {
             type: Schema.Types.ObjectId,
