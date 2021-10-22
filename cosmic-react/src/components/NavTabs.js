@@ -1,3 +1,5 @@
+
+
 function NavTabs({ currentPage, handlePageChange }) {
     return (
         <ul className="nav nav-tabs">
@@ -28,12 +30,12 @@ function NavTabs({ currentPage, handlePageChange }) {
                     Inventory
         </a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" >
                 <a
-                    href="#cart"
+                    href="#cart" 
                     onClick={() => handlePageChange('Cart')}
                     className={currentPage === 'Cart' ? 'nav-link active' : 'nav-link'}
-                >
+                > 
                     Cart
         </a>
             </li>
