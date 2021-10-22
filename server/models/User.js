@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
+const orderSchema = require('./Order');
 
 const userSchema = new Schema({
   firstName: {
@@ -25,13 +25,16 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
-  orders:  [
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'Order'
-    }
-]
-});
+    // set orderSchema to be an array of data that adheres to the bookSchema
+    orders: [orderSchema],
+  },
+  // set this to use virtual below
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
