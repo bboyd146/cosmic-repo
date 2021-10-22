@@ -26,10 +26,14 @@ const typeDefs = gql`
         password: String!
         orders: [Order]
 }
-type Auth {
+    type Auth {
         token: ID!
         user: User
-    }
+}
+
+    type Checkout {
+    session: ID
+}
 
 `
 
