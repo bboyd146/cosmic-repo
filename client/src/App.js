@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,6 +13,7 @@ import { StoreProvider } from './utils/GlobalState';
 import Home from './pages/Home';
 import About from './pages/About';
 import Inventory from './pages/Inventory';
+import NavTabs from './components/NavTabs';
 
 
 const httpLink = createHttpLink({
@@ -40,8 +41,8 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
-            <Routes>
+            <NavTabs />
+            <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
@@ -51,10 +52,7 @@ function App() {
               <Route path="/inventory">
                 <Inventory />
               </Route>
-              {/* <Route path="/cart">
-                <Cart />
-              </Route> */}
-            </Routes>
+            </Switch>
           </StoreProvider>
         </div>
       </Router>

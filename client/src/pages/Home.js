@@ -1,13 +1,11 @@
-import Logo from '../Logo'
+// import Logo from '../Logo'
+import Header from '../components/Header';
 
 const Home = () => {
     return (
-        <div>
-            <Logo />
-            <div>
-                <img className="record-img" alt=""/>
-            </div>
-        </div>
+        <>
+        <Header />
+        </>
     )
 }
 
