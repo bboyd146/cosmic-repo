@@ -48,9 +48,9 @@ function App() {
               </Route>
               <Route path="/about">
                 <About />
-              </Route>
               <Route path="/inventory">
                 <Inventory />
+              </Route>
               </Route>
             </Switch>
           </StoreProvider>
