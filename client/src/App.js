@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css';
+
 // import Header from './components/Header';
 import { StoreProvider } from './utils/GlobalState';
 import Home from './pages/Home';
