@@ -7,9 +7,110 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { loadStripe } from '@stripe/stripe-js';
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Fragment, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { XIcon } from '@heroicons/react/outline'
 
 const stripePromise = loadStripe('sk_test_51JnmXxIaPmg7X2tXbhdOxIhaEw7z5QcM02U4oahA7RMUaV0VkSnuVGvqMShB2qhlALHJ0BViR9sLuWoSA9bQLUDd00lrBMOLyw');
-const Cart = () => {
+// const Cart = () => {
+//     const [state, dispatch] = useStoreContext();
+//     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+//     useEffect(() => {
+//         if (data) {
+//             stripePromise.then((res) => {
+//                 res.redirectToCheckout({ sessionId: data.checkout.session });
+//             });
+//         }
+//     }, [data]);
+
+//     useEffect(() => {
+//         async function getCart() {
+//             const cart = await idbPromise('cart', 'get');
+//             dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+//         }
+
+//         if (!state.cart.length) {
+//             getCart();
+//         }
+//     }, [state.cart.length, dispatch]);
+
+//     function toggleCart() {
+//         dispatch({ type: TOGGLE_CART });
+//     }
+
+//     function calculateTotal() {
+//         let sum = 0;
+//         state.cart.forEach((item) => {
+//             sum += item.price * item.purchaseQuantity;
+//         });
+//         return sum.toFixed(2);
+//     }
+
+//     function submitCheckout() {
+//         const productIds = [];
+
+//         state.cart.forEach((item) => {
+//             for (let i = 0; i < item.purchaseQuantity; i++) {
+//                 productIds.push(item._id);
+//             }
+//         });
+
+//         getCheckout({
+//             variables: { products: productIds },
+//         });
+//     }
+
+//     if (!state.cartOpen) {
+//         return (
+//             <div className="cart-closed" onClick={toggleCart}>
+//                 <span role="img" aria-label="trash">
+//                     🛒
+//                 </span>
+//             </div>
+//         );
+//     }
+
+//     return (
+//         <div className="cart">
+//             <div className="close" onClick={toggleCart}>
+//                 [close]
+//             </div>
+//             <h2>Shopping Cart</h2>
+//             {state.cart.length ? (
+//                 <div>
+//                     {state.cart.map((item) => (
+//                         <CartItem key={item._id} item={item} />
+//                     ))}
+
+//                     <div className="flex-row space-between">
+//                         <strong>Total: ${calculateTotal()}</strong>
+
+//                         {Auth.loggedIn() ? (
+//                             <button onClick={submitCheckout}>Checkout</button>
+//                         ) : (
+//                             <span>(log in to check out)</span>
+//                         )}
+//                     </div>
+//                 </div>
+//             ) : (
+//                 <h3>
+//                     <span role="img" aria-label="shocked">
+//                         😱
+//                     </span>
+//                     You haven't added anything to your cart yet!
+//                 </h3>
+//             )}
+//         </div>
+//     );
+// };
+
+export default Cart
+
+
+
+export default function Cart() {
+    const [open, setOpen] = useState(true)
     const [state, dispatch] = useStoreContext();
     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
@@ -68,73 +169,6 @@ const Cart = () => {
         );
     }
 
-    return (
-        <div className="cart">
-            <div className="close" onClick={toggleCart}>
-                [close]
-            </div>
-            <h2>Shopping Cart</h2>
-            {state.cart.length ? (
-                <div>
-                    {state.cart.map((item) => (
-                        <CartItem key={item._id} item={item} />
-                    ))}
-
-                    <div className="flex-row space-between">
-                        <strong>Total: ${calculateTotal()}</strong>
-
-                        {Auth.loggedIn() ? (
-                            <button onClick={submitCheckout}>Checkout</button>
-                        ) : (
-                            <span>(log in to check out)</span>
-                        )}
-                    </div>
-                </div>
-            ) : (
-                <h3>
-                    <span role="img" aria-label="shocked">
-                        😱
-                    </span>
-                    You haven't added anything to your cart yet!
-                </h3>
-            )}
-        </div>
-    );
-};
-
-export default Cart
-
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XIcon } from '@heroicons/react/outline'
-
-const products = [
-    {
-        id: 1,
-        name: 'Throwback Hip Bag',
-        href: '#',
-        color: 'Salmon',
-        price: '$90.00',
-        quantity: 1,
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-        imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    },
-    {
-        id: 2,
-        name: 'Medium Stuff Satchel',
-        href: '#',
-        color: 'Blue',
-        price: '$32.00',
-        quantity: 1,
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-        imageAlt:
-            'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-    },
-    // More products...
-]
-
-export default function Example() {
-    const [open, setOpen] = useState(true)
 
     return (
         <Transition.Root show={open} as={Fragment}>
@@ -182,16 +216,8 @@ export default function Example() {
                                         <div className="mt-8">
                                             <div className="flow-root">
                                                 <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                                    {products.map((product) => (
-                                                        <li key={product.id} className="py-6 flex">
-                                                            <div className="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                                                                <img
-                                                                    src={product.imageSrc}
-                                                                    alt={product.imageAlt}
-                                                                    className="w-full h-full object-center object-cover"
-                                                                />
-                                                            </div>
-                                                        </li>
+                                                    {state.cart.map((item) => (
+                                                        <CartItem key={item._id} item={item} />
                                                     ))}
                                                 </ul>
                                             </div>
@@ -205,17 +231,17 @@ export default function Example() {
                                         </div>
                                         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                                         <div className="mt-6">
-                                        {Auth.loggedIn() ? (
-                                            <a
-                                                href="#"
-                                                className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                                                onClick={submitCheckout}
-                                            >
-                                                Checkout
-                                            </a>)
-                                            : (
-                                                <span>(log in to check out)</span>
-                                            )}
+                                            {Auth.loggedIn() ? (
+                                                <a
+                                                    href="#"
+                                                    className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                                    onClick={submitCheckout}
+                                                >
+                                                    Checkout
+                                                </a>)
+                                                : (
+                                                    <span>(log in to check out)</span>
+                                                )}
                                         </div>
                                         <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
                                             <p>
@@ -239,3 +265,5 @@ export default function Example() {
         </Transition.Root>
     )
 }
+
+export default Cart
