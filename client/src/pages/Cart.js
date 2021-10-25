@@ -1,9 +1,12 @@
+import { motion } from 'framer-motion'
 
 const Cart = () => {
     return (
-        <div>
+        <motion.div exit={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}>
             
-        </div>
+        </motion.div>
     )
 }
 
