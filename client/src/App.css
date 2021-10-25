@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
 
+
+
 body {
     background-color: rgb(255, 252, 233);
     
@@ -26,16 +28,7 @@ body {
     
 }
 
-ul {
-    display: flex;
-    justify-content: right;
-}
-
-li {
-    list-style: none;
-    font-size: 35px;
-    
-}
+.nav-tabs
 
 
 a {
@@ -47,13 +40,3 @@ a {
     font-weight: lighter;
 }
 
-.record-img {
-    background-image: url(./images/records-1524110-1280x960.jpg);
-    width: 100%;
-    height: 600px;
-    border-radius: 20px;
-}
-
-.fka {
-    background-image: url(./images/AlbumCovers/FKA_Twigs_EP2/FKA_twigs_EP2.png);
-}

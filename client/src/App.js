@@ -8,7 +8,8 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css';
-// import Header from './components/Header';
+import { AnimatePresence } from 'framer-motion'
+
 import { StoreProvider } from './utils/GlobalState';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -42,17 +43,27 @@ function App() {
         <div>
           <StoreProvider>
             <NavTabs />
+            <AnimatePresence>
             <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
+              </Switch>
+              </AnimatePresence>
+              <AnimatePresence>
+              <Switch>
               <Route path="/about">
                 <About />
-              </Route>
+                </Route>
+                </Switch>
+                </AnimatePresence>
+                <AnimatePresence>
+                <Switch>
               <Route path="/inventory">
                 <Inventory />
               </Route>
             </Switch>
+            </AnimatePresence>
           </StoreProvider>
         </div>
       </Router>
