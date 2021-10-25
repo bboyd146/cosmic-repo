@@ -42,14 +42,7 @@ export default function Header() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                                    {navigation.map((item) => (
-                                        <a key={item.name} href={item.href} className="font-medium text-pink hover:text-gray-900">
-                                            {item.name}
-                                        </a>
-                                    ))}
-                                    
-                                </div>
+                                
                             </nav>
                         </div>
 
@@ -104,8 +97,10 @@ export default function Header() {
                         </Transition>
                     </Popover>
 
+                                            
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
+                            
                             <h1 className="text-4xl tracking-tight font-logo text-pink sm:text-5xl md:text-6xl">
                                 <span className="block xl:inline ">Cosmic Records</span>{' '}
                                 <span className="block text-indigo-600 xl:inline">online record store</span>
