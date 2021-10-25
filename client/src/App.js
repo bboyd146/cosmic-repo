@@ -47,11 +47,15 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
+              </Switch>
+              <Switch>
               <Route path="/about">
                 <About />
+                </Route>
+                </Switch>
+                <Switch>
               <Route path="/inventory">
                 <Inventory />
-              </Route>
               </Route>
             </Switch>
           </StoreProvider>
