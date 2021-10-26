@@ -15,6 +15,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Inventory from './pages/Inventory';
 import NavTabs from './components/NavTabs';
+import Cart from './pages/Cart';
+import Faq1 from './pages/FAQs'
 
 
 const httpLink = createHttpLink({
@@ -64,6 +66,21 @@ function App() {
               </Route>
             </Switch>
             </AnimatePresence>
+            <AnimatePresence>
+                <Switch>
+              <Route path="/cart">
+                <Cart />
+              </Route>
+            </Switch>
+            </AnimatePresence>
+            <AnimatePresence>
+                <Switch>
+              <Route path="/FAQs">
+                <Faq1 />
+              </Route>
+            </Switch>
+            </AnimatePresence>
+
           </StoreProvider>
         </div>
       </Router>
