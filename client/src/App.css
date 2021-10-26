@@ -3,12 +3,12 @@
 
 
 body {
-    background-color: rgb(255, 252, 233);
+    background-color:rgb(34, 34, 55);
     
 }
 
 .logo {
-    
+    text-align: center;
     pointer-events: none;
     /* -webkit-text-stroke: 2.6px #dc5589; */
     color: #d4115d;

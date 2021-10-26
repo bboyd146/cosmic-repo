@@ -1,7 +1,7 @@
 // import Logo from '../Logo'
 import { motion } from 'framer-motion'
 import Header from '../components/Header';
-import Cart from '../components/Cart';
+
 
 
 

@@ -8,7 +8,7 @@ const NavTabs = () => {
                 <Link to="/">Home</Link>
                 <Link to="/Inventory">Inventory</Link>
                 <Link to="/About">About</Link>
-                <Link to="/Cart">Cart</Link>
+                <Link to="/Cart"><MdOutlineShoppingCart/></Link>
             </div>
         </nav>
         

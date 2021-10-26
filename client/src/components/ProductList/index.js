@@ -8,9 +8,11 @@ import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
-    const {state, dispatch} = useStoreContext();
+    const [state, dispatch] = useStoreContext();
 
-    const { currentCategory } = state;
+
+    const { currentGenre }  = state;
+    
 
     const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -34,30 +36,34 @@ function ProductList() {
     }, [data, loading, dispatch]);
 
     function filterProducts() {
-    if (!currentCategory) {
+    if (!currentGenre) {
         return state.products;
     }
 
     return state.products.filter(
-        (product) => product.category._id === currentCategory
+        (product) => product.genre._id === currentGenre
     );
     }
 
     return (
     <div className="my-2">
-        <h2>Our Products:</h2>
+        
         {state.products.length ? (
-        <div className="flex-row">
+            <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {filterProducts().map((product) => (
             <ProductItem
                 key={product._id}
                 _id={product._id}
                 image={product.image}
+                description={product.description}
                 title={product.title}
                 price={product.price}
                 quantity={product.quantity}
             />
-            ))}
+            ))
+            }
+        </div>
         </div>
         ) : (
         <h3>You haven't added any products yet!</h3>
@@ -68,3 +74,8 @@ function ProductList() {
 }
 
 export default ProductList;
+
+
+
+
+

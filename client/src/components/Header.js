@@ -131,7 +131,7 @@ export default function Header() {
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                 <img
-                    className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded"
+                    className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded shadowed"
                     src="https://res.cloudinary.com/cosmic-records/image/upload/v1635176551/cosmic%20records/records-1524110-1280x960_eulwfv.jpg"
                     alt=""
                 />
