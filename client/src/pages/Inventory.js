@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import ProductList from '../components/ProductList';
 import Logo from "../components/Logo"
 
+
 const Inventory = () => {
     return (
         <motion.div exit={{ opacity: 0 }}

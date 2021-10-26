@@ -4,7 +4,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 const NavTabs = () => {
     return (
         <nav className="flex nav-tabs text-center">
-            <div className="links flex-initial">
+            <div className="flex flex-wrap">
                 <Link to="/">Home</Link>
                 <Link to="/Inventory">Inventory</Link>
                 <Link to="/About">About</Link>

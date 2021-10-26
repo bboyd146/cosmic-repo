@@ -1,8 +1,8 @@
 // import Logo from '../Logo'
 import { motion } from 'framer-motion'
 import Header from '../components/Header';
-
-
+import Highlight4 from '../components/Highlight';
+import Index from '../components/Carousel';
 
 
 const Home = () => {
@@ -13,6 +13,8 @@ const Home = () => {
         initial={{ opacity: 0 }}
         >
         <Header />
+        <Index />
+        <Highlight4 />
         </motion.div>
     )
 }
