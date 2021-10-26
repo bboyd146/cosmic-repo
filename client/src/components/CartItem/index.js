@@ -2,8 +2,37 @@ import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { Fragment, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { XIcon } from '@heroicons/react/outline'
+
+const product = [
+    {
+      id: 1,
+      name: 'Throwback Hip Bag',
+      href: '#',
+      color: 'Salmon',
+      price: '$90.00',
+      quantity: 1,
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+      imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+    },
+    {
+      id: 2,
+      name: 'Medium Stuff Satchel',
+      href: '#',
+      color: 'Blue',
+      price: '$32.00',
+      quantity: 1,
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+      imageAlt:
+        'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+    },
+    // More products...
+  ]
 
 const CartItem = ({ item }) => {
+    const [open, setOpen] = useState(true)
 
     const [, dispatch] = useStoreContext();
 
@@ -39,6 +68,7 @@ const CartItem = ({ item }) => {
     }
 
     return (
+        <Transition.Root show={open} as={Fragment}>
         <div>
             <div className="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
                 <img
@@ -76,7 +106,7 @@ const CartItem = ({ item }) => {
                 </div>
             </div>
         </div>
-    );
+        </Transition.Root>    );
 }
 
 export default CartItem;

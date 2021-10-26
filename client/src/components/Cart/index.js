@@ -105,7 +105,7 @@ const stripePromise = loadStripe('sk_test_51JnmXxIaPmg7X2tXbhdOxIhaEw7z5QcM02U4o
 //     );
 // };
 
-export default Cart
+// export default Cart
 
 
 
@@ -266,4 +266,4 @@ export default function Cart() {
     )
 }
 
-export default Cart
+
