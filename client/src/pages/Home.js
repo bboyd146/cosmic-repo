@@ -14,7 +14,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         >
         <Header />
-        <Footer />
+        {/* <Footer /> */}
         </motion.div>
     )
 }
