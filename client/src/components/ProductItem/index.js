@@ -13,7 +13,7 @@ function ProductItem(item) {
         title,
         _id,
         price,
-        quantity
+        description,
     } = item;
 
     const { cart } = state
@@ -40,20 +40,26 @@ function ProductItem(item) {
     }
 
     return (
-        <div className="card px-1 py-1">
-            <Link to={`/products/${_id}`}>
-                <img
-                    alt={title}
-                    src={`/images/${image}`}
-                />
-                <p>{title}</p>
-            </Link>
+        <div className="bg-cream">
             <div>
-                <div>{quantity} {pluralize("item", quantity)} in stock</div>
-                <span>${price}</span>
+            <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                <h2 className="sr-only">Products</h2>
+                {/* <div className="mt-6 grid grid-cols-4 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"> */}
+                        <a key={_id} className="group">
+                            <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8">
+                                <img
+                                    src={image}
+                                    className="w-full h-full object-center object-cover group-hover:opacity-75"
+                                />
+                            </div>
+                                <h3 className="mt-4 text-lg text-gray-700">{title}</h3>
+                                {/* <h2 className="block mt-5 text-lg font-medium text-gray-900">{description}</h2> */}
+                            <p className="mt-5 text-lg font-medium text-gray-900">${price}</p>
+                        </a>
+                </div>
             </div>
-            <button onClick={addToCart}>Add to cart</button>
         </div>
+        // </div>
     );
 }
 

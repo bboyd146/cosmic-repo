@@ -5,7 +5,7 @@ const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require('./schema');
 const path = require('path');
 
-const PORT = process.env.PORT || 3006
+const PORT = process.env.PORT || 3008
 const app = express();
 
 
