@@ -4,7 +4,18 @@ import { FaUserAstronaut } from "react-icons/fa"
 import { FaHome } from "react-icons/fa";
 import { BsVinylFill } from "react-icons/bs";
 
-const NavTabs = () => {
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
+const NavTabs = ({cartOpen = false}) => {
+    // const [state, dispatch] = useStoreContext();
+    
+
+//     function toggleCart() {
+        
+//         dispatch({ type: TOGGLE_CART });
+//       }
     return (
         <nav className="flex nav-tabs justify-center">
             <div className="flex flex-wrap">
@@ -14,7 +25,9 @@ const NavTabs = () => {
                 <Link to="/Cart"><MdOutlineShoppingCart size={56}/></Link>
             </div>
         </nav>
-        
+
+
+
     )
 }
 
