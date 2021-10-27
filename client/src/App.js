@@ -18,6 +18,7 @@ import NavTabs from './components/NavTabs';
 import Cart from './pages/Cart';
 import Faq1 from './pages/FAQs'
 import Signup from './pages/Signup';
+import Contact from './pages/Contact';
 
 
 
@@ -43,57 +44,57 @@ const client = new ApolloClient({
 function App() {
   return (
     <div>
-    <ApolloProvider client={client}>
-      <Router>
-        <div>
-          <StoreProvider>
-            <NavTabs />
-            <AnimatePresence>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              </Switch>
+      <ApolloProvider client={client}>
+        <Router>
+          <div>
+            <StoreProvider>
+              <NavTabs />
+              <AnimatePresence>
+                <Switch>
+                  <Route exact path="/">
+                    <Home />
+                  </Route>
+                </Switch>
               </AnimatePresence>
               <AnimatePresence>
-              <Switch>
-              <Route path="/Login">
-                <Login />
-                </Route>
+                <Switch>
+                  <Route path="/Login">
+                    <Login />
+                  </Route>
                 </Switch>
-                </AnimatePresence>
-                <AnimatePresence>
-              <Switch>
-              <Route path="/Signup">
-                <Signup />
-                </Route>
+              </AnimatePresence>
+              <AnimatePresence>
+                <Switch>
+                  <Route path="/Signup">
+                    <Signup />
+                  </Route>
                 </Switch>
-                </AnimatePresence>
-                <AnimatePresence>
+              </AnimatePresence>
+              <AnimatePresence>
                 <Switch>
-              <Route path="/inventory">
-                <Inventory />
-              </Route>
-            </Switch>
-            </AnimatePresence>
-            <AnimatePresence>
+                  <Route path="/inventory">
+                    <Inventory />
+                  </Route>
+                </Switch>
+              </AnimatePresence>
+              <AnimatePresence>
                 <Switch>
-              <Route path="/cart">
-                <Cart />
-              </Route>
-            </Switch>
-            </AnimatePresence>
-            <AnimatePresence>
+                  <Route path="/cart">
+                    <Cart />
+                  </Route>
+                </Switch>
+              </AnimatePresence>
+              <AnimatePresence>
                 <Switch>
-              <Route path="/FAQs">
-                <Faq1 />
-              </Route>
-            </Switch>
-            </AnimatePresence>
-          </StoreProvider>
-        </div>
-      </Router>
-    </ApolloProvider>
+                  <Route path="/FAQs">
+                    <Faq1 />
+                  </Route>
+                </Switch>
+              </AnimatePresence>
+            </StoreProvider>
+          </div>
+        </Router>
+      </ApolloProvider>
     </div>
   );
 }
