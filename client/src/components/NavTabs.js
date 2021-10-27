@@ -7,7 +7,6 @@ const NavTabs = () => {
             <div className="flex flex-wrap">
                 <Link to="/">Home</Link>
                 <Link to="/Inventory">Inventory</Link>
-                <Link to="/About">About</Link>
                 <Link to="/Cart"><MdOutlineShoppingCart/></Link>
             </div>
         </nav>

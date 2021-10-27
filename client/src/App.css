@@ -3,7 +3,7 @@
 
 
 body {
-    background-color:rgb(34, 34, 55);
+    background-color: rgb(255, 252, 233);
     
 }
 
@@ -31,7 +31,9 @@ body {
 .nav-tabs
 
 
+
 a {
+    
     text-decoration: none;
     padding: 50px;
     color:#d4115d;

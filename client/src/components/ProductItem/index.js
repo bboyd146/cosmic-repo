@@ -4,9 +4,11 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import ProductQuickView from "../ProductQuickView";
 
 function ProductItem(item) {
     const [state, dispatch] = useStoreContext();
+    const [productModal, setProductModal] = React.useState(false);
 
     const {
         image,
@@ -39,6 +41,9 @@ function ProductItem(item) {
         }
     }
 
+    const closeProductModal = () => setProductModal(false);
+
+
     return (
         <div className="bg-cream">
             <div>
@@ -50,6 +55,7 @@ function ProductItem(item) {
                                 <img
                                     src={image}
                                     className="w-full h-full object-center object-cover group-hover:opacity-75"
+                                    onClick={() => setProductModal(true)}
                                 />
                             </div>
                                 <h3 className="mt-4 text-lg text-gray-700">{title}</h3>
@@ -57,6 +63,7 @@ function ProductItem(item) {
                             <p className="mt-5 text-lg font-medium text-gray-900">${price}</p>
                         </a>
                 </div>
+                <ProductQuickView item={item} isOpen={productModal} closeHandler={closeProductModal} />
             </div>
         </div>
         // </div>
