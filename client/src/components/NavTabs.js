@@ -3,12 +3,21 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { TOGGLE_CART } from '../utils/actions'
+import { useStoreContext } from '../utils/GlobalState'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const NavTabs = () => {
+const NavTabs = ({cartOpen = false}) => {
+    const [state, dispatch] = useStoreContext();
+    
+
+    function toggleCart() {
+        
+        dispatch({ type: TOGGLE_CART });
+      }
     return (
 
         <nav className="flex nav-tabs text-center hidden lg:block">
@@ -18,7 +27,7 @@ const NavTabs = () => {
                 <Link to="/About" className="text-base font-small text-gray-900 hover:text-gray-700">About</Link>
                 {/* <Link to="/Login" className="text-base font-small text-gray-900 hover:text-gray-700">Login</Link>
                 <Link to="/Signup" className="text-base font-small text-gray-900 hover:text-gray-700">Signup</Link> */}
-                <Link to="/Cart" className="text-base font-small text-gray-900 hover:text-gray-700"><MdOutlineShoppingCart /></Link>
+                <Link to="/Inventory" className="text-base font-small text-gray-900 hover:text-gray-700" onClick={toggleCart}><MdOutlineShoppingCart /></Link>
             <Popover as="div" className="ml-3 relative">
                 <div>
                     <Popover.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
