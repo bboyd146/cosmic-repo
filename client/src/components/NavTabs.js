@@ -8,10 +8,10 @@ const NavTabs = () => {
     return (
         <nav className="flex nav-tabs justify-center">
             <div className="flex flex-wrap">
-                <Link to="/"><FaHome size={70}/></Link>
-                <Link to="/Inventory"><BsVinylFill size={70}/></Link>
-                <Link to="/Login"><FaUserAstronaut size={70}/></Link>
-                <Link to="/Cart"><MdOutlineShoppingCart size={70}/></Link>
+                <Link to="/"><FaHome size={56}/></Link>
+                <Link to="/Inventory"><BsVinylFill size={56}/></Link>
+                <Link to="/Login"><FaUserAstronaut size={56}/></Link>
+                <Link to="/Cart"><MdOutlineShoppingCart size={56}/></Link>
             </div>
         </nav>
         
