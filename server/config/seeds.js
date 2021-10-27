@@ -13,7 +13,8 @@ db.once('open', async () => {
         { name: 'Country' },
         { name: 'Folk' },
         { name: 'Soul' },
-        { name: 'Funk' }
+        { name: 'Funk' },
+        { name: 'Dub/Raggae'}
     ]);
 
     console.log('genre seeded');

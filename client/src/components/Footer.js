@@ -24,7 +24,7 @@ function Footer() {
                             <div class="flex flex-wrap justify-center gap-6 pt-2">
                                 <a href="https://github.com/bboyd146/cosmic-repo.git">
                                     <button
-                                        class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
+                                        class="bg-pink p-2 font-semibold text-cream inline-flex items-center space-x-2 rounded"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ function Footer() {
                                     </button>
                                 </a>
                                 <div class="container mx-auto px-6 items-center pt-6">
-                                    <p class="text-sm text-dark font-bold mb-2">
+                                    <p class="text-sm text-pink font-bold mb-2">
                                         © 2021 by Bradley Boyd, Josh Nolan, and Osvaldo Zavaleta
                                     </p>
                                 </div>
