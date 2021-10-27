@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import ProductList from '../components/ProductList';
-import Logo from "../components/Logo"
-import GenreMenu from "../components/GenreMenu"
+import Logo from '../components/Logo';
+import GenreMenu from '../components/GenreMenu';
+import Pagination from '../components/Pagination'
 
 
 const Inventory = () => {
@@ -16,6 +17,7 @@ const Inventory = () => {
                 <GenreMenu />
             <ProductList />
                 </div>
+                <Pagination />
         </motion.div>
     )
 }
