@@ -30,8 +30,6 @@ body {
 
 .nav-tabs
 
-
-
 a {
     
     text-decoration: none;
@@ -40,5 +38,13 @@ a {
     font-size: 30px;
     font-family: 'Goblin One', cursive;
     font-weight: lighter;
+}
+
+.text-indigo-600 {
+    color: #d4115d;
+}
+
+.text-indigo-500 {
+    color: white;
 }
 
