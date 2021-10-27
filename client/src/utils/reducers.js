@@ -19,7 +19,8 @@ export const reducer = (state, action) => {
                 products: [...action.products],
             };
 
-        case ADD_TO_CART:
+            case ADD_TO_CART:
+            console.log(action.product)
             return {
                 ...state,
                 cartOpen: true,

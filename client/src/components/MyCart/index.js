@@ -11,7 +11,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-const stripePromise = loadStripe('sk_test_51JnmXxIaPmg7X2tXbhdOxIhaEw7z5QcM02U4oahA7RMUaV0VkSnuVGvqMShB2qhlALHJ0BViR9sLuWoSA9bQLUDd00lrBMOLyw');
+const stripePromise = loadStripe('pk_test_51JnmXxIaPmg7X2tXIs50xiSEsvQTO6xXK9ATsTwz5t8glA310PxQ2kHcH9OM4fYhSWfqf3FC9ggQiRROISBiNm3k0098ZOofsg');
 // const Cart = () => {
 //     const [state, dispatch] = useStoreContext();
 //     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
