@@ -112,7 +112,7 @@ export default function Header() {
                             <h1 className="text-5xl tracking-tight font-logo text-pink sm:text-5xl md:text-8xl">
                                 <span className="block xl:inline ">Cosmic Records</span>{' '}
                             </h1>
-                            <h2 className="text-5xl tracking-tight font-logo text-pink sm:text-5xl md:text-6xl">
+                            <h2 className="text-5xl tracking-tight font-logo text-indigo-600 sm:text-5xl md:text-6xl">
                                 <span className="block text-indigo-600 xl:inline">online store</span>
                             </h2>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -131,7 +131,7 @@ export default function Header() {
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                 <img
-                    className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded shadowed"
+                    className="h-57 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full "
                     src="https://res.cloudinary.com/cosmic-records/image/upload/v1635176551/cosmic%20records/records-1524110-1280x960_eulwfv.jpg"
                     alt=""
                 />
