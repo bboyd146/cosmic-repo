@@ -9,13 +9,13 @@ function classNames(...classes) {
 }
 
 const NavTabs = ({cartOpen = false}) => {
-    const [state, dispatch] = useStoreContext();
+    // const [state, dispatch] = useStoreContext();
     
 
-    function toggleCart() {
+//     function toggleCart() {
         
-        dispatch({ type: TOGGLE_CART });
-      }
+//         dispatch({ type: TOGGLE_CART });
+//       }
     return (
         <nav className="flex nav-tabs justify-center">
             <div className="flex flex-wrap">
