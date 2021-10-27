@@ -30,8 +30,6 @@ body {
 
 .nav-tabs
 
-
-
 a {
     
     text-decoration: none;
@@ -42,3 +40,18 @@ a {
     font-weight: lighter;
 }
 
+.text-indigo-600 {
+    color: #d4115d;
+}
+
+.text-indigo-500 {
+    color: white;
+}
+
+.bg-indigo-600 {
+    background-color: #d4115d;
+}
+
+.h-12 {
+    height: 150px;
+}
