@@ -1,6 +1,6 @@
 const navigation = [
     { name: 'FAQs', href: '/FAQs' },
-    { name: 'About', href: '#' },
+    { name: 'Login', href: '/Login' },
     { name: 'Contact', href: '#' },
     { name: 'Company', href: '#' },
 ]
