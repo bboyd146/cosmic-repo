@@ -18,6 +18,8 @@ import NavTabs from './components/NavTabs';
 import Cart from './pages/Cart';
 import Faq1 from './pages/FAQs'
 import Signup from './pages/Signup';
+import Payment from './pages/Payment';
+import Shipping from './pages/Shipping';
 
 
 
@@ -87,6 +89,20 @@ function App() {
                 <Switch>
               <Route path="/FAQs">
                 <Faq1 />
+              </Route>
+            </Switch>
+            </AnimatePresence>
+            <AnimatePresence>
+                <Switch>
+              <Route path="/Payment">
+                <Payment />
+              </Route>
+            </Switch>
+            </AnimatePresence>
+            <AnimatePresence>
+                <Switch>
+              <Route path="/Shipping">
+                <Shipping />
               </Route>
             </Switch>
             </AnimatePresence>

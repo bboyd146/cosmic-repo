@@ -233,14 +233,19 @@ export default function MyCart() {
                                         <div className="mt-6">
                                             {Auth.loggedIn() ? (
                                                 <a
-                                                    href="#"
+                                                    href="/Shipping"
                                                     className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                                                     onClick={submitCheckout}
                                                 >
                                                     Checkout
                                                 </a>)
                                                 : (
+                                                    <a 
+                                                    href="/Login"                                                   href="/Shipping"
+                                                    className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                                    >
                                                     <span>(log in to check out)</span>
+                                                    </a>
                                                 )}
                                         </div>
                                         <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
