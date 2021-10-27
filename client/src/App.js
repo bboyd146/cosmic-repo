@@ -91,6 +91,13 @@ function App() {
                   </Route>
                 </Switch>
               </AnimatePresence>
+              <AnimatePresence>
+                <Switch>
+                  <Route path="/Contact">
+                    <Contact />
+                  </Route>
+                </Switch>
+              </AnimatePresence>
             </StoreProvider>
           </div>
         </Router>
