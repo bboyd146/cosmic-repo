@@ -25,7 +25,7 @@ const navigation = [
 
 export default function Header() {
     return (
-        <div className="relative bg-cream overflow-hidden m-20">
+        <div className="relative bg-cream overflow-hidden m-20 rounded">
             <div className="max-w-7xl mx-auto">
                 <div className="relative z-10 pb-8 bg-cream sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                     <svg
