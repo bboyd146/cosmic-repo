@@ -58,7 +58,7 @@ PAYMENT IS EXPECTED WITHIN FIVE DAYS UNLESS PRIOR ARRANGEMENT IS MADE.<br></br><
                                 </svg>
                             </button>
                         </div>
-                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show2 ? "block" : "hidden")}>If you would like to make a return, take a look at our policies below. We want to make sure you’re completely happy with your purchase. If there’s anything we can do to improve your experience, please contact us at <br></br><br></br>cosmicjanitorhtx@gmail.com<br></br><br></br>
+                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show2 ? "block" : "hidden")}>If you would like to make a return, take a look at our policies below. We want to make sure you’re completely happy with your purchase. If there’s anything we can do to improve your experience, please contact us at <br></br><br></br><a href = "mailto: cosmicjanitorhtx@gmail.com">cosmicjanitorhtx@gmail.com</a><br></br><br></br>
                         We’ll accept return requests for items that are unopened, unused, with the original tags still intact. The product(s) must be in their original packaging, if applicable, in the same condition it was received.<br></br><br></br>
                         If you wish to return your item, we must receive your request within 30 days of the date you received your item.</p>
                     </div>
@@ -77,7 +77,7 @@ PAYMENT IS EXPECTED WITHIN FIVE DAYS UNLESS PRIOR ARRANGEMENT IS MADE.<br></br><
                                 </svg>
                             </button>
                         </div>
-                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show3 ? "block" : "hidden")}>In the unlikely event that you receive a damaged or defective item, we’re happy to exchange the item for a new one.<br></br><br></br> Please email cosmicjanitorhtx@gmail.com within 30 days of receiving your product to begin the process.<br></br><br></br>
+                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show3 ? "block" : "hidden")}>In the unlikely event that you receive a damaged or defective item, we’re happy to exchange the item for a new one.<br></br><br></br> Please email <a href = "mailto: cosmicjanitorhtx@gmail.com">cosmicjanitorhtx@gmail.com</a> within 30 days of receiving your product to begin the process.<br></br><br></br>
                         If the item is marked “final sale”, it does not qualify for a return, or exchange, and cannot be refunded.</p>
                     </div>
 
