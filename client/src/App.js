@@ -12,11 +12,12 @@ import { AnimatePresence } from 'framer-motion'
 
 import { StoreProvider } from './utils/GlobalState';
 import Home from './pages/Home';
-import About from './pages/About';
+import Login from './pages/Login';
 import Inventory from './pages/Inventory';
 import NavTabs from './components/NavTabs';
 import Cart from './pages/Cart';
 import Faq1 from './pages/FAQs'
+import Signup from './pages/Signup';
 
 
 const httpLink = createHttpLink({
