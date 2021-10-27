@@ -1,8 +1,14 @@
+import { motion } from 'framer-motion'
 import { LockClosedIcon } from '@heroicons/react/solid'
 
 export default function Example() {
     return (
         <>
+        <motion.div exit={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        >
             <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8">
                     <div>
@@ -86,6 +92,7 @@ export default function Example() {
                     </form>
                 </div>
             </div>
+            </motion.div>
         </>
     )
 }

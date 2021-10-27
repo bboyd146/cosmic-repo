@@ -20,6 +20,7 @@ import Faq1 from './pages/FAQs'
 import Signup from './pages/Signup';
 
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -41,6 +42,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    <div>
     <ApolloProvider client={client}>
       <Router>
         <div>
@@ -88,12 +90,14 @@ function App() {
               </Route>
             </Switch>
             </AnimatePresence>
-
           </StoreProvider>
         </div>
       </Router>
     </ApolloProvider>
+    </div>
   );
 }
 
 export default App;
+
+

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from 'framer-motion'
 
 const Faq1 = () => {
     const [show, setShow] = useState(false);
@@ -7,24 +8,21 @@ const Faq1 = () => {
     const [show4, setShow4] = useState(false);
 
     return (
+        <motion.div exit={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        >
         <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-            <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Frequently Asked Questions</h2>
+            <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-purple-900">Frequently Asked Questions</h2>
             <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
                 <div className=" ">
-                    <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p>
-                </div>
-
-                <div className=" border-b-2 border-gray-200 pb-2 flex justify-center items-center md:mt-0 mt-10 md:w-auto w-full ">
-                    <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " />
-                    <svg className=" cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.66667 11.3333C9.244 11.3333 11.3333 9.244 11.3333 6.66667C11.3333 4.08934 9.244 2 6.66667 2C4.08934 2 2 4.08934 2 6.66667C2 9.244 4.08934 11.3333 6.66667 11.3333Z" stroke="#4B5563" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M14 14L10 10" stroke="#4B5563" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <p className=" font-normal text-base leading-6 text-purple-900 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p>
                 </div>
             </div>
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-5/12 lg:w-4/12 w-full ">
-                    <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:block hidden rounded-lg" />
+                    <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:block hidden rounded-3xl" />
                     <img src="https://i.ibb.co/gZMfQJq/pexels-ron-lach-8128069-1-1.png" alt="Img of Glass bottle" className="w-full md:hidden block " />
                 </div>
                 <div className=" md:w-7/12 lg:w-8/12 w-full md:mt-0 sm:mt-14 mt-10">
@@ -105,6 +103,7 @@ PAYMENT IS EXPECTED WITHIN FIVE DAYS UNLESS PRIOR ARRANGEMENT IS MADE.<br></br><
                 </div>
             </div>
         </div>
+        </motion.div>
     );
 };
 
