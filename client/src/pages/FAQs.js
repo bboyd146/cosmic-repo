@@ -23,7 +23,7 @@ const Faq1 = () => {
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-5/12 lg:w-4/12 w-full ">
                     <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:block hidden rounded-3xl" />
-                    <img src="https://i.ibb.co/gZMfQJq/pexels-ron-lach-8128069-1-1.png" alt="Img of Glass bottle" className="w-full md:hidden block " />
+                    <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:hidden block rounded-3xl" />
                 </div>
                 <div className=" md:w-7/12 lg:w-8/12 w-full md:mt-0 sm:mt-14 mt-10">
                     {/* <!-- Shipping Section --> */}
