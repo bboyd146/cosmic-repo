@@ -53,6 +53,7 @@ function GenreMenu() {
     const [state, dispatch] = useStoreContext();
 
     const { genres } = state;
+    console.log(state.genre)
 
     const { loading, data: genreData } = useQuery(QUERY_GENRE);
 
@@ -285,9 +286,9 @@ function GenreMenu() {
                                                 <Disclosure.Panel className="pt-6">
                                                     <div className="space-y-4">
                                                         {genres.map((item) => (
-                                                            <div key={item._id} className="flex items-center">
+                                                            <div key={item.id} className="flex items-center">
                                                                 <input
-                                                                    id={`${item._id}`}
+                                                                    id={`${item.id}`}
                                                                     name={`${item.name}[]`}
                                                                     type="checkbox"
                                                                     className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
@@ -296,7 +297,7 @@ function GenreMenu() {
                                                                     }}
                                                                 />
                                                                 <label
-                                                                    htmlFor={`${item._id}`}
+                                                                    htmlFor={`${item.id}`}
                                                                     className="ml-3 text-sm text-gray-600"
                                                                 >
                                                                     {item.name}
