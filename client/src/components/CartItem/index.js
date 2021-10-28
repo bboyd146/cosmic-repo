@@ -9,6 +9,7 @@ import { XIcon } from '@heroicons/react/outline'
 
 
 
+
 const CartItem = ({ item }) => {
     const [open, setOpen] = useState(true)
 
