@@ -2,7 +2,7 @@ const navigation = [
     { name: 'FAQs', href: '/FAQs' },
     { name: 'Login', href: '/Login' },
     { name: 'Contact', href: '/Contact' },
-    { name: 'Company', href: '#' },
+    { name: 'Company', href: '/Company' },
 ]
 
 function Footer() {
