@@ -95,13 +95,6 @@ function App() {
               </AnimatePresence>
               <AnimatePresence>
                 <Switch>
-                  <Route path="/FAQs">
-                    <Faq1 />
-                  </Route>
-                </Switch>
-              </AnimatePresence>
-              <AnimatePresence>
-                <Switch>
                   <Route path="/Payment">
                     <Payment />
                   </Route>
