@@ -161,7 +161,7 @@ db.once('open', async () => {
             genre: genre[0]._id,
             description:
                 'Jesus Built My Hotrod" is a song by American industrial metal band Ministry, released as the first single from their fifth studio album, Psalm 69: The Way to Succeed and the Way to Suck Eggs. An industrial metal track, it features elements of rockabilly and psychobilly. The track\'s instrumentation is defined by its polyrhythmic structure.',
-            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635446175/cosmic%20records/Jesus_Built_My_Hotrod_v2jq7i.jpg',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635446175/cosmic%20records/Jesus_Built_My_Hotrod_v2jq7i.jpg',
             price: 30.00,
             quantity: 1
         },
@@ -170,7 +170,7 @@ db.once('open', async () => {
             genre: genre[3]._id,
             description:
                 'Stade 2 is the fourth studio album by Mr. Oizo.',
-            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635446375/cosmic%20records/Stade_2_cover_small_gj7jay.jpg',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635301245/cosmic%20records/mr_oizo_stade_lg_ziqtjf.jpg',
             price: 28.00,
             quantity: 1
         },
@@ -214,7 +214,7 @@ db.once('open', async () => {
             title: 'Squarepusher - Feed Me Weird Things',
             genre: genre[3]._id,
             description:
-                'Feed Me Weird Things is the debut studio album by English electronic musician Tom Jenkinson under the alias Squarepusher.The album received positive reviews from critics and has been retrospectively cited as a landmark release in the drill \'n\' bass subgenre.',
+                'Feed Me Weird Things is the debut studio album by English electronic musician Tom Jenkinson under the alias Squarepusher. The album received positive reviews from critics and has been retrospectively cited as a landmark release in the drill \'n\' bass subgenre.',
             image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635449781/cosmic%20records/Squarepusher.feedmeweirdthings_r9hpqi.jpg',
             price: 35.00,
             quantity: 1
@@ -223,7 +223,7 @@ db.once('open', async () => {
             title: 'Dabrye - Instrmntl',
             genre: genre[3]._id,
             description:
-                'Feed Me Weird Things is the debut studio album by English electronic musician Tom Jenkinson under the alias Squarepusher.The album received positive reviews from critics and has been retrospectively cited as a landmark release in the drill \'n\' bass subgenre.',
+                'At just over 30 minutes, Instrmntl is a continuation of the beat experiments by Dabrye',
             image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635300996/cosmic%20records/dabrye_instrmntl_b2ee5h.jpg',
             price: 25.00,
             quantity: 1
@@ -288,6 +288,96 @@ db.once('open', async () => {
             description:
                 'Last Splash is the second album by American indie rock band the Breeders, released on August 30, 1993. Last Splash has been seen as one of alternative rock\'s most enduring masterpieces',
             image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635453279/cosmic%20records/TheBreedersLastSplash_mqzke7.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Chet Baker - Sings',
+            genre: genre[4]._id,
+            description:
+                'Chet Baker Sings is the debut vocal album by jazz musician Chet Baker. "My Funny Valentine" was regularly included in his concert performances, and is considered by some to be his signature song.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635454730/cosmic%20records/CHET-BAKER-SINGS_kio96v.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'PJ Harvey - Rid Of Me',
+            genre: genre[0]._id,
+            description:
+                'Rid of Me is the second studio album by English singer-songwriter and musician PJ Harvey. It was released by Island Records in May 1993, approximately one year after the release of her critically acclaimed debut album Dry. It marked a departure from Harvey\'s previous songwriting, being more raw and aggressive than its predecessor.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635454929/cosmic%20records/Rid_of_Me_dxjvlk.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Built To Spill - Keep It Like A Secret',
+            genre: genre[2]._id,
+            description:
+                'Keep It Like a Secret is the fourth full-length album released by indie rock band Built to Spill.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635455249/cosmic%20records/Keep_It_Like_a_Secret_a3mbgf.jpg',
+            price: 28.00,
+            quantity: 1
+        },
+        {
+            title: 'Nine Inch Nails - Pretty Hate Machine',
+            genre: genre[0]._id,
+            description:
+                'Pretty Hate Machine is the debut studio album by American industrial rock band Nine Inch Nails.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635455627/cosmic%20records/Nine_Inch_Nails_-_Pretty_Hate_Machine_bki7oj.png',
+            price: 26.00,
+            quantity: 1
+        },
+        {
+            title: 'Bob Dylan - The Freewheel\' Bob Dylan',
+            genre: genre[6]._id,
+            description:
+                'The Freewheelin\' Bob Dylan is the second studio album by American singer-songwriter Bob Dylan',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635455882/cosmic%20records/Bob_Dylan_-_The_Freewheelin__Bob_Dylan_wsgkpx.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Clark - Death Peak',
+            genre: genre[3]._id,
+            description:
+                'Death Peak is the eighth studio album by British electronic musician Chris Clark and the sixth one under the moniker Clark.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456021/cosmic%20records/Clark_-_Death_Peak_album_cover_z3bl7k.png',
+            price: 45.00,
+            quantity: 1
+        },
+        {
+            title: 'Parliament - Mothership Connection',
+            genre: genre[8]._id,
+            description:
+                'Mothership Connection is the fourth album by American funk band Parliament. This concept album is often rated among the best Parliament-Funkadelic releases, and was the first to feature horn players Maceo Parker and Fred Wesley, who had previously backed James Brown in the J.B.\'s.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456183/cosmic%20records/ParliamentMothershipConnection_nsxxki.jpg',
+            price: 10.00,
+            quantity: 1
+        },
+        {
+            title: 'My Life With The Thrill Kill Kult - Kooler Than Jesus',
+            genre: genre[0]._id,
+            description:
+                'Kooler Than Jesus is an EP released by electronic industrial rock band My Life with the Thrill Kill Kult in 1990. It contains the original "Kooler Than Jesus" 12" single along with two other previously release 12" singles, "My Life with the Thrill Kill Kult" and "Some Have to Dance...Some Have to Kill"',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635456695/cosmic%20records/Kooler_than_jesus_uqhjvz.jpg',
+            price: 20.00,
+            quantity: 1
+        },
+        {
+            title: 'Mr. Bungle - California',
+            genre: genre[0]._id,
+            description:
+                'California explores an ambiance new to the band, conjuring up the surly dance moves of Cyd Charisse and Fred Astaire; digging through the graveyard of riffs to find English pop, Elvis, Neil Diamond and Michael Jackson. The album is sure to alienate those expecting weird meter-changes and heartless vulgarities',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456586/cosmic%20records/MrBungle-California_wkjjjv.jpg',
+            price: 35.00,
+            quantity: 1
+        },
+        {
+            title: 'The Sugarcubes - Life\'s Too Good',
+            genre: genre[0]._id,
+            description:
+                'Life\'s Too Good is the debut studio album by Icelandic alternative rock group The Sugarcubes. The album was an unexpected success and brought international attention for the band, especially to lead singer Björk, who would launch a successful solo career in 1993.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456970/cosmic%20records/The_Sugarcubes_-_Life_s_Too_Good_o990xk.png',
             price: 25.00,
             quantity: 1
         },
