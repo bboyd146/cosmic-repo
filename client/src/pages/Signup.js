@@ -5,10 +5,11 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
-export default function Signup(props) {
-    const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: ''});
+export default function Signup() {
+    const [formState, setFormState] = useState({ email: '', password: ''});
     const [addUser] = useMutation(ADD_USER);
     console.log(formState)
+    console.log(formState.email)
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         const mutationResponse = await addUser({
@@ -21,6 +22,7 @@ export default function Signup(props) {
         });
         console.log(mutationResponse)
         const token = mutationResponse.data.addUser.token;
+        console.log(token)
         Auth.login(token);
     };
 
@@ -53,7 +55,7 @@ export default function Signup(props) {
                             {/* <input type="hidden" name="remember" defaultValue="true" /> */}
                             <div className="rounded-md shadow-sm -space-y-px">
                                 <div>
-                                    <label htmlFor="first-name" className="sr-only">
+                                    <label htmlFor="firstName" className="sr-only">
                                         First name
                                     </label>
                                     <input
@@ -68,7 +70,7 @@ export default function Signup(props) {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="last-name" className="sr-only">
+                                    <label htmlFor="lastName" className="sr-only">
                                         Last name
                                     </label>
                                     <input
@@ -81,7 +83,7 @@ export default function Signup(props) {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email-address" className="sr-only">
+                                    <label htmlFor="email" className="sr-only">
                                         Email address
                                     </label>
                                     <input
