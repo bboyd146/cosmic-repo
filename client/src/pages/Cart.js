@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import MyCart from '../components/MyCart'
+import Inventory from './Inventory'
 const Cart = () => {
     return (
         <motion.div 
@@ -9,6 +10,7 @@ const Cart = () => {
         transition={{ duration: 1 }}
         >
         <MyCart />
+        <Inventory />
         </motion.div>
     )
 }
