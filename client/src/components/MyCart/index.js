@@ -241,7 +241,7 @@ export default function MyCart() {
                                                 </a>)
                                                 : (
                                                     <a 
-                                                    href="/Login"                                                   href="/Shipping"
+                                                    href="/Login"                                                   
                                                     className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                                                     >
                                                     <span>(log in to check out)</span>
