@@ -106,10 +106,15 @@ const resolvers = {
             return { token, user };
         },
         addUser: async (parent, args) => {
-            const user = await User.create(args);
-            const token = signToken(user);
-
-            return { token, user };
+            try {
+                        const user = await User.create(args);
+                        const token = signToken(user);
+            
+                        return { token, user };
+            } catch(error) {
+            console.log(error);
+            return error;
+            }
         },
         addOrder: async (parent, { products }, context) => {
             console.log(context);
