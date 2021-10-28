@@ -50,37 +50,37 @@ function classNames(...classes) {
 
 function GenreMenu() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-    // const [state, dispatch] = useStoreContext();
+    const [state, dispatch] = useStoreContext();
 
-    // const { genres } = state;
+    const { genres } = state;
 
-    // const { loading, data: genreData } = useQuery(QUERY_GENRE);
+    const { loading, data: genreData } = useQuery(QUERY_GENRE);
 
-    // useEffect(() => {
-    //     if (genreData) {
-    //         dispatch({
-    //             type: UPDATE_GENRES,
-    //             genres: genreData.genres,
-    //         });
-    //         genreData.genres.forEach((genre) => {
-    //             idbPromise('genres', 'put', genre);
-    //         });
-    //     } else if (!loading) {
-    //         idbPromise('genres', 'get').then((genres) => {
-    //             dispatch({
-    //                 type: UPDATE_GENRES,
-    //                 genres: genres,
-    //             });
-    //         });
-    //     }
-    // }, [genreData, loading, dispatch]);
+    useEffect(() => {
+        if (genreData) {
+            dispatch({
+                type: UPDATE_GENRES,
+                genres: genreData.genres,
+            });
+            genreData.genres.forEach((genre) => {
+                idbPromise('genres', 'put', genre);
+            });
+        } else if (!loading) {
+            idbPromise('genres', 'get').then((genres) => {
+                dispatch({
+                    type: UPDATE_GENRES,
+                    genres: genres,
+                });
+            });
+        }
+    }, [genreData, loading, dispatch]);
 
-    // const handleClick = (id) => {
-    //     dispatch({
-    //         type: UPDATE_CURRENT_GENRE,
-    //         currentGenre: id,
-    //     });
-    // };
+    const handleClick = (id) => {
+        dispatch({
+            type: UPDATE_CURRENT_GENRE,
+            currentGenre: id,
+        });
+    };
 
 
 
@@ -195,7 +195,7 @@ function GenreMenu() {
                                 <div>
                                     <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                                         Sort
-                    <ChevronDownIcon
+                                        <ChevronDownIcon
                                             className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                                             aria-hidden="true"
                                         />
@@ -252,7 +252,7 @@ function GenreMenu() {
                     <section aria-labelledby="products-heading" className="pt-6 pb-24">
                         <h2 id="products-heading" className="sr-only">
                             Products
-            </h2>
+                        </h2>
 
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
                             {/* Filters */}
@@ -284,21 +284,22 @@ function GenreMenu() {
                                                 </h3>
                                                 <Disclosure.Panel className="pt-6">
                                                     <div className="space-y-4">
-                                                        {section.options.map((option, optionIdx) => (
-                                                            <div key={option.value} className="flex items-center">
+                                                        {genres.map((item) => (
+                                                            <div key={item._id} className="flex items-center">
                                                                 <input
-                                                                    id={`filter-${section.id}-${optionIdx}`}
-                                                                    name={`${section.id}[]`}
-                                                                    defaultValue={option.value}
+                                                                    id={`${item._id}`}
+                                                                    name={`${item.name}[]`}
                                                                     type="checkbox"
-                                                                    defaultChecked={option.checked}
                                                                     className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                    onClick={() => {
+                                                                        handleClick(item._id);
+                                                                    }}
                                                                 />
                                                                 <label
-                                                                    htmlFor={`filter-${section.id}-${optionIdx}`}
+                                                                    htmlFor={`${item._id}`}
                                                                     className="ml-3 text-sm text-gray-600"
                                                                 >
-                                                                    {option.name}
+                                                                    {item.name}
                                                                 </label>
                                                             </div>
                                                         ))}
