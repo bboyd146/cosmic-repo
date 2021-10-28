@@ -129,6 +129,24 @@ db.once('open', async () => {
             price: 25.00,
             quantity: 1
         },
+        {
+            title: 'Mr. Bungle - Disco Volante',
+            genre: genre[0]._id,
+            description:
+                'Disco Volante (Italian for Flying Saucer) is the second studio album by American experimental rock band Mr. Bungle. It  is considered to be the most experimental of all their albums, mixing elements from such varied styles as death metal, jazz, Arabic music, musique concrète, easy listening and even tango.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635300996/cosmic%20records/Disco_Volante_album_cover_qgcx8c.jpg',
+            price: 30.00,
+            quantity: 1
+        },
+        {
+        title: 'Aphex Twin - Collapse EP',
+        genre: genre[4]._id,
+        description:
+            'Disco Volante (Italian for Flying Saucer) is the second studio album by American experimental rock band Mr. Bungle. It  is considered to be the most experimental of all their albums, mixing elements from such varied styles as death metal, jazz, Arabic music, musique concrète, easy listening and even tango.',
+        image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635300996/cosmic%20records/Disco_Volante_album_cover_qgcx8c.jpg',
+        price: 30.00,
+        quantity: 1
+        },
     ]);
 
     console.log('products seeded');
