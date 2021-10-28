@@ -23,7 +23,7 @@ const Faq1 = () => {
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-5/12 lg:w-4/12 w-full ">
                     <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:block hidden rounded-3xl" />
-                    <img src="https://i.ibb.co/gZMfQJq/pexels-ron-lach-8128069-1-1.png" alt="Img of Glass bottle" className="w-full md:hidden block " />
+                    <img src="https://res.cloudinary.com/cosmic-records/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1635346851/cosmic%20records/Screen_Shot_2021-10-27_at_10.00.24_AM_ggdvjg.png" alt="Img of question marks" className="w-full md:hidden block rounded-3xl" />
                 </div>
                 <div className=" md:w-7/12 lg:w-8/12 w-full md:mt-0 sm:mt-14 mt-10">
                     {/* <!-- Shipping Section --> */}
@@ -58,7 +58,7 @@ PAYMENT IS EXPECTED WITHIN FIVE DAYS UNLESS PRIOR ARRANGEMENT IS MADE.<br></br><
                                 </svg>
                             </button>
                         </div>
-                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show2 ? "block" : "hidden")}>If you would like to make a return, take a look at our policies below. We want to make sure you’re completely happy with your purchase. If there’s anything we can do to improve your experience, please contact us at <br></br><br></br>cosmicjanitorhtx@gmail.com<br></br><br></br>
+                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show2 ? "block" : "hidden")}>If you would like to make a return, take a look at our policies below. We want to make sure you’re completely happy with your purchase. If there’s anything we can do to improve your experience, please contact us at <br></br><br></br><a href = "mailto: cosmicjanitorhtx@gmail.com">cosmicjanitorhtx@gmail.com</a><br></br><br></br>
                         We’ll accept return requests for items that are unopened, unused, with the original tags still intact. The product(s) must be in their original packaging, if applicable, in the same condition it was received.<br></br><br></br>
                         If you wish to return your item, we must receive your request within 30 days of the date you received your item.</p>
                     </div>
@@ -77,7 +77,7 @@ PAYMENT IS EXPECTED WITHIN FIVE DAYS UNLESS PRIOR ARRANGEMENT IS MADE.<br></br><
                                 </svg>
                             </button>
                         </div>
-                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show3 ? "block" : "hidden")}>In the unlikely event that you receive a damaged or defective item, we’re happy to exchange the item for a new one.<br></br><br></br> Please email cosmicjanitorhtx@gmail.com within 30 days of receiving your product to begin the process.<br></br><br></br>
+                        <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show3 ? "block" : "hidden")}>In the unlikely event that you receive a damaged or defective item, we’re happy to exchange the item for a new one.<br></br><br></br> Please email <a href = "mailto: cosmicjanitorhtx@gmail.com">cosmicjanitorhtx@gmail.com</a> within 30 days of receiving your product to begin the process.<br></br><br></br>
                         If the item is marked “final sale”, it does not qualify for a return, or exchange, and cannot be refunded.</p>
                     </div>
 
