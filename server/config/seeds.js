@@ -140,11 +140,11 @@ db.once('open', async () => {
         },
         {
         title: 'Aphex Twin - Collapse EP',
-        genre: genre[4]._id,
+        genre: genre[3]._id,
         description:
-            'Disco Volante (Italian for Flying Saucer) is the second studio album by American experimental rock band Mr. Bungle. It  is considered to be the most experimental of all their albums, mixing elements from such varied styles as death metal, jazz, Arabic music, musique concrète, easy listening and even tango.',
-        image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635300996/cosmic%20records/Disco_Volante_album_cover_qgcx8c.jpg',
-        price: 30.00,
+            'Collapse EP is an album or EP by British electronic musician Richard D. James under the pseudonym Aphex Twin. The record received universal acclaim from music critics, who praised James for returning to his signature "Aphex Twin" sound.',
+        image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635440541/cosmic%20records/Collapse__EP_opyi3b.jpg',
+        price: 28.00,
         quantity: 1
         },
     ]);
