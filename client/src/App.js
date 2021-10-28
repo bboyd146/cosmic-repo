@@ -21,6 +21,7 @@ import Signup from './pages/Signup';
 import Payment from './pages/Payment';
 import Shipping from './pages/Shipping';
 import Contact from './pages/Contact';
+import Company from './pages/Company';
 
 
 
