@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { LockClosedIcon } from '@heroicons/react/solid'
 
-export default function Example() {
+export default function Login() {
     return (
         <>
         <motion.div exit={{ opacity: 0 }}
