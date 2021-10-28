@@ -13,7 +13,7 @@ export const QUERY_PRODUCTS = gql`
         _id
         }
     }
-    }
+}
 `;
 
 export const QUERY_CHECKOUT = gql`
