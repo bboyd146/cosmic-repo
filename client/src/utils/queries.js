@@ -41,7 +41,7 @@ export const QUERY_ALL_PRODUCTS = gql`
 
 export const QUERY_GENRE = gql`
     {
-    genre {
+    genres {
         _id
         name
     }
