@@ -14,7 +14,7 @@ export default function Index() {
                     <img src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/luxe2.png" alt="bag" className="lg:w-full h-full object-cover object-center w-full" />
                 </div> */}
                 <div className="lg:w-1/2 lg:pl-12 lg:pr-24">
-                    <p className="text-lg leading-none font-semibold text-gray-600 pb-2">Featured</p>
+                    <p className="text-xl leading-none font-semibold text-gray-600 pb-2">Coming Soon!</p>
                     <p className="md:text-3xl lg:text-4xl text-3xl font-logo lg:leading-9 text-indigo-600 lg:pb-6 md:pb-4 pb-2">Bargain Bin</p>
                     <p className="text-xl leading-5 font-semibold text-pink md:pb-10 pb-8">Check out our Bargain Bin!</p>
                     <div className="md:block flex items-center justify-center">
