@@ -7,33 +7,18 @@ function Success() {
     const [addOrder] = useMutation(ADD_ORDER);
 
     useEffect(() => {
-        async function saveOrder() {
-            const cart = await idbPromise('cart', 'get');
-            const products = cart.map((item) => item._id);
-
-            if (products.length) {
-                const { data } = await addOrder({ variables: { products } });
-                const productData = data.addOrder.products;
-
-                productData.forEach((item) => {
-                    idbPromise('cart', 'delete', item);
-                });
-            }
 
             setTimeout(() => {
                 window.location.assign('/');
             }, 3000);
-        }
-
-        saveOrder();
-    }, [addOrder]);
+        });
 
     return (
         <div>
-            <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-                <h1>Success!</h1>
-                <h2>Thank you for your purchase!</h2>
-                <h2>You will now be redirected to the home page</h2>
+            <div className="mt-16 mx-auto w-11/12 sm:w-2/3 mb-5 sm:mb-10">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-indigo-700 font-bold leading-tight">Success!</h1>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-indigo-700 font-bold leading-tight">Thank you for your purchase!</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-indigo-700 font-bold leading-tight">You will now be redirected to the home page</h2>
             </div>
         </div>
     );

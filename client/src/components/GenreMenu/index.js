@@ -53,7 +53,6 @@ function GenreMenu() {
     const [state, dispatch] = useStoreContext();
 
     const { genres, currentGenres } = state;
-    console.log(state.genre)
 
     const { loading, data: genreData } = useQuery(QUERY_GENRE);
 

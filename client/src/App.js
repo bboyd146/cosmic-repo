@@ -23,8 +23,6 @@ import Shipping from './pages/Shipping';
 import Contact from './pages/Contact';
 import Company from './pages/Company';
 import Success from './pages/Success';
-import Error10 from './pages/404';
-
 
 
 const httpLink = createHttpLink({
@@ -128,13 +126,6 @@ function App() {
                 <Switch>
                   <Route path="/Success">
                     <Success />
-                  </Route>
-                </Switch>
-              </AnimatePresence>
-              <AnimatePresence>
-                <Switch>
-                  <Route>
-                    {Error10}
                   </Route>
                 </Switch>
               </AnimatePresence>
