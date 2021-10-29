@@ -87,7 +87,7 @@ function GenreMenu() {
 
 
     return (
-        <div className="bg-cream">
+        <div className="bg-cream col-span-1 flex">
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -255,17 +255,17 @@ function GenreMenu() {
                             Products
                         </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+                        <div className="grid grid-cols-1  gap-x-8 gap-y-10">
                             {/* Filters */}
                             <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
-                                <ul role="list" className="text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200">
+                                {/* <ul role="list" className="text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
                                             <a href={category.href}>{category.name}</a>
                                         </li>
                                     ))}
-                                </ul>
+                                </ul> */}
 
                                 {filters.map((section) => (
                                     <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
