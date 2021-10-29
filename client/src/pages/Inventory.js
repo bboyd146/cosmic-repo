@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import ProductList from '../components/ProductList';
 import Logo from '../components/Logo';
-// import GenreMenu from '../components/GenreMenu';
+import GenreMenu from '../components/GenreMenu';
 import Pagination from '../components/Pagination'
 
 
@@ -11,13 +11,13 @@ const Inventory = () => {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            >
-                <Logo />
-            <div className="flex">
-                {/* <GenreMenu /> */}
-            <ProductList />
-                </div>
-                <Pagination />
+        >
+            <Logo />
+            <div className="grid grid-cols-5 py-16 px-20">
+                <GenreMenu />
+                <ProductList />
+            </div>
+            <Pagination />
         </motion.div>
     )
 }

@@ -58,7 +58,7 @@ const NavTabs = ({ cartOpen = false }) => {
                     </Link>) : (
                     <div>
                     </div>
-                )};
+                )}
             </div>
         </nav>
     )
