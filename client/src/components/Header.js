@@ -23,7 +23,7 @@ export default function Header() {
 
 
                     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                        <div className="sm:text-center lg:text-left">
+                        <div className="sm:text-left lg:text-left">
 
                             <h1 className="text-5xl tracking-tight font-logo text-pink sm:text-5xl md:text-8xl">
                                 <span className="block xl:inline ">Cosmic Records</span>{' '}

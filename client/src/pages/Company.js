@@ -39,7 +39,7 @@ function Company() {
                             <div className="rounded-2xl overflow-hidden shadow-md bg-dark">
                                 <div className="absolute -mt-20 w-full flex justify-center">
                                     <div className="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif" alt className="rounded-full object-cover h-full w-full shadow-md" />
+                                        <img src="https://res.cloudinary.com/cosmic-records/image/upload/v1635545909/cosmic%20records/6244A078-38A8-4081-A536-51169BFCE1BF_1_105_c_iydwml.jpg" alt className="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
                                 </div>
                                 <div className="px-6 mt-16">
