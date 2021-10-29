@@ -52,7 +52,7 @@ function GenreMenu() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [state, dispatch] = useStoreContext();
 
-    const { genres } = state;
+    const { genres, currentGenres } = state;
     console.log(state.genre)
 
     const { loading, data: genreData } = useQuery(QUERY_GENRE);
@@ -76,10 +76,18 @@ function GenreMenu() {
         }
     }, [genreData, loading, dispatch]);
 
-    const handleClick = (id) => {
+    const handleClick = (e, id) => {
+        const { checked } = e.target
+        let newGenres = [];
+        console.log(currentGenres);
+        if(checked && !currentGenres.includes(id)) {
+            newGenres = [...currentGenres, id];
+        } else {
+            newGenres = currentGenres.filter(genre => genre !== id)
+        }
         dispatch({
             type: UPDATE_CURRENT_GENRE,
-            currentGenre: id,
+            currentGenres: newGenres,
         });
     };
 
@@ -292,8 +300,8 @@ function GenreMenu() {
                                                                     name={`${item.name}[]`}
                                                                     type="checkbox"
                                                                     className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                                                                    onClick={() => {
-                                                                        handleClick(item._id);
+                                                                    onClick={(e) => {
+                                                                        handleClick(e, item._id);
                                                                     }}
                                                                 />
                                                                 <label

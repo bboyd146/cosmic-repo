@@ -58,28 +58,9 @@ export default function Shipping() {
                                     </div>
                                 </div>
                                 <div className="relative w-full">
-                                    <p id="button2" className=" px-2 border-b border-gray-200 text-left leading-4 text-base text-gray-600 py-4 w-full">
-                                        Region
-                                        <span className="text-gray-400"> (optional)</span>
-                                    </p>
-                                    <button onClick={() => setDropdown2(!dropdown2)} className="focus:outline-none  focus:ring-2 focus:ring-gray-500 rounded-full cursor-pointer absolute bottom-4 right-0">
-                                        <svg id="close2" className={` transform ${dropdown2 ? "rotate-180" : ""}  `} width={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L8 10L4 6" stroke="#4B5563" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
-                                    <div className={`shadow absolute z-10 bg-white top-10  w-full mt-3 ${dropdown2 ? "" : "hidden"}`}>
-                                        <div className="flex flex-col  w-full">
-                                            <p tabIndex={0} onclick="changeButton2('London')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">
-                                                London
-                                            </p>
-                                            <p tabIndex={0} onclick="changeButton2('New York')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">
-                                                New York
-                                            </p>
-                                            <p tabIndex={0} onclick="changeButton2('Dubai')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">
-                                                Dubai
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <div className="w-full">
+                                    <input className="focus:outline-none focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 pt-4 pb-3   w-full" type="text" placeholder="Region (Optional)" />
+                                </div>
                                 </div>
                             </div>
                             <div className="flex justify-between flex-col sm:flex-row w-full items-start space-y-8 sm:space-y-0 sm:space-x-8">
@@ -94,7 +75,7 @@ export default function Shipping() {
                                     </button>
                                     <div id="menu3" className={`shadow absolute z-10 bg-white top-10  w-full mt-3 ${dropdown3 ? "" : "hidden"}`}>
                                         <div className="flex flex-col  w-full">
-                                            <p tabIndex={0} onclick="changeButton3('USA')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">
+                                            <p tabIndex={0} onClick="changeButton3('USA')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">
                                                 USA
                                             </p>
                                             <p tabIndex={0} onclick="changeButton3('UK')" className="focus:outline-none cursor-pointer px-3 hover:text-white hover:bg-gray-800 focus:bg-gray-800 focus:text-white text-left  text-base text-gray-600 py-2 w-full">

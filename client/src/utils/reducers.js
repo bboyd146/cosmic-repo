@@ -78,7 +78,7 @@ export const reducer = (state, action) => {
         case UPDATE_CURRENT_GENRE:
             return {
                 ...state,
-                currentGenre: action.currentGenre,
+                currentGenres: [...action.currentGenres],
             };
 
         default:
