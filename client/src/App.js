@@ -25,6 +25,7 @@ import Company from './pages/Company';
 
 
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });

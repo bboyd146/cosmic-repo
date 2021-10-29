@@ -16,7 +16,7 @@ module.exports = {
 
 
   theme: {
-    extend: {
+  extend: {
   colors: {
     'pink': '#d4115d',
     'cream': 'rgb(255, 252, 233)',
@@ -26,5 +26,8 @@ module.exports = {
   fontFamily: {
   logo: ['Goblin One'],
 },
+
+  
 }
+
 }

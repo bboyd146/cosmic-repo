@@ -87,7 +87,7 @@ function GenreMenu() {
 
 
     return (
-        <div className="bg-cream">
+        <div className="bg-cream col-span-1 flex">
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -129,7 +129,7 @@ function GenreMenu() {
                                 {/* Filters */}
                                 <form className="mt-4 border-t border-gray-200">
                                     <h3 className="sr-only">Categories</h3>
-                                    <ul role="list" className="font-medium text-gray-900 px-2 py-3">
+                                    {/* <ul role="list" className="font-medium text-gray-900 px-2 py-3">
                                         {subCategories.map((genre) => (
                                             <li key={genre.name}>
                                                 <a href={genre.href} className="block px-2 py-3">
@@ -137,7 +137,7 @@ function GenreMenu() {
                                                 </a>
                                             </li>
                                         ))}
-                                    </ul>
+                                    </ul> */}
 
                                     {filters.map((section) => (
                                         <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
@@ -194,13 +194,13 @@ function GenreMenu() {
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">
                                 <div>
-                                    <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                                    {/* <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                                         Sort
                                         <ChevronDownIcon
                                             className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500"
                                             aria-hidden="true"
                                         />
-                                    </Menu.Button>
+                                    </Menu.Button> */}
                                 </div>
 
                                 <Transition
@@ -255,17 +255,17 @@ function GenreMenu() {
                             Products
                         </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+                        <div className="grid grid-cols-1  gap-x-8 gap-y-10">
                             {/* Filters */}
                             <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
-                                <ul role="list" className="text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200">
+                                {/* <ul role="list" className="text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
                                             <a href={category.href}>{category.name}</a>
                                         </li>
                                     ))}
-                                </ul>
+                                </ul> */}
 
                                 {filters.map((section) => (
                                     <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
