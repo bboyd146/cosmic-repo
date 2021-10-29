@@ -46,7 +46,7 @@ export default function Signup() {
                         <div>
                             <img
                                 className="mx-auto h-12 w-auto rounded-xl"
-                                src="https://res.cloudinary.com/cosmic-records/image/upload/v1635299182/cosmic%20records/Cosmic_Records_4_v9sdkz.png"
+                                src="https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635299182/cosmic%20records/Cosmic_Records_4_v9sdkz.png"
                                 alt="Workflow"
                             />
                             <h2 className="mt-6 text-center text-3xl font-extrabold text-pink">Create an account</h2>

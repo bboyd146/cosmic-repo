@@ -52,6 +52,9 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
+
+        
+
         checkout: async (parent, args, context) => {
             const url = new URL(context.headers.referer).origin;
             const order = new Order({ products: args.products });
@@ -107,13 +110,13 @@ const resolvers = {
         },
         addUser: async (parent, args) => {
             try {
-                        const user = await User.create(args);
-                        const token = signToken(user);
-            
-                        return { token, user };
-            } catch(error) {
-            console.log(error);
-            return error;
+                const user = await User.create(args);
+                const token = signToken(user);
+
+                return { token, user };
+            } catch (error) {
+                console.log(error);
+                return error;
             }
         },
         addOrder: async (parent, { products }, context) => {

@@ -29,6 +29,18 @@ const startApolloServer = async () => {
     });
 }
 
+app.get("/Inventory", async (req, res) => {
+    const PAGE_SIZE = 3;
+    const page = parseInt(req.query.page || "0");
+    const total = await Product.countDocuments({});
+    const products = await Product.find({})
+        .limit(PAGE_SIZE)
+        .skip(PAGE_SIZE * page);
+    res.json({
+        totalPages: Math.ceil(total / PAGE_SIZE),
+        products,
+    });
+});
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
