@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Payment = () => {
-    const countries = ["China", "Russia", "UK"];
+    const countries = ["China", "Russia", "UK", "United States"];
     const [menu, setMenu] = useState(false);
     const [country, setCountry] = useState("United States");
 
@@ -21,7 +21,7 @@ const Payment = () => {
                                 <path d="M2.91681 7L5.25014 9.33333" stroke="currentColor" strokeWidth="0.666667" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M2.91681 7.00002L5.25014 4.66669" stroke="currentColor" strokeWidth="0.666667" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                            <p className="text-sm leading-none">Back</p>
+                            <a href="/Shipping" className="text-sm leading-none">Back</a>
                         </button>
                         <p className="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9 text-gray-800">Checkout</p>
                     </div>
@@ -29,7 +29,7 @@ const Payment = () => {
                     <div className="flex flex-col xl:flex-row justify-center xl:justify-between space-y-6 xl:space-y-0 xl:space-x-6 w-full">
 
 
-                        <div className="p-8 bg-gray-100 flex flex-col lg:w-full xl:w-3/5">
+                        <div className="p-8 bg-cream flex flex-col lg:w-full ">
                             <button className="border border-transparent hover:border-gray-300 bg-gray-900 hover:bg-white text-white hover:text-gray-900 flex flex-row justify-center items-center space-x-2 py-4 rounded w-full">
                                 <div>
                                     <svg className="fill-current" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
