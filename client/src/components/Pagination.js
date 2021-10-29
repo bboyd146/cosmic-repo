@@ -1,90 +1,103 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { useEffect, useState } from "react";
+import { useQuery } from '@apollo/client';
+import { QUERY_PRODUCTS } from '../utils/queries';
+import { idbPromise } from '../utils/helpers';
+import { useStoreContext } from '../utils/GlobalState';
+import { UPDATE_PRODUCTS } from '../utils/actions';
 
-export default function Example() {
+const Pagination = () => {
+    const [pageNumber, setPageNumber] = useState(0);
+    const [numberOfPages, setNumberOfPages] = useState(0);
+    const [products, setProducts] = useState([]);
+
+    const pages = new Array(numberOfPages).fill(null).map((v, i) => i);
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/products?page=${pageNumber}`)
+            .then((response) => response.json())
+            .then(({ totalPages, products }) => {
+                setProducts(products);
+                setNumberOfPages(totalPages);
+            });
+    }, [pageNumber]);
+
+    const gotoPrevious = () => {
+        setPageNumber(Math.max(0, pageNumber - 1));
+    };
+
+    const gotoNext = () => {
+        setPageNumber(Math.min(numberOfPages - 1, pageNumber + 1));
+    };
+
+    const [state, dispatch] = useStoreContext();
+
+
+    // const { currentGenres } = state;
+
+
+    const { loading, data } = useQuery(QUERY_PRODUCTS);
+
+    useEffect(() => {
+        if (data) {
+            dispatch({
+                type: UPDATE_PRODUCTS,
+                products: data.products,
+            });
+            data.products.forEach((product) => {
+                idbPromise('products', 'put', product);
+            });
+        } else if (!loading) {
+            idbPromise('products', 'get').then((products) => {
+                dispatch({
+                    type: UPDATE_PRODUCTS,
+                    products: products,
+                });
+            });
+        }
+    }, [data, loading, dispatch]);
+
+    // function filterProducts() {
+    //     if (currentGenres.length === 0) {
+    //         return state.products;
+    //     }
+
+    //     return state.products.filter(
+    //         (product) => currentGenres.includes(product.genre._id)
+    //     );
+    // }
+
+
+
+
+
     return (
-        <div className="bg-cream px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-            <div className="flex-1 flex justify-between sm:hidden">
-                <a
-                    href="#"
-                    className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-cream hover:bg-gray-50"
-                >
-                    Previous
-        </a>
-                <a
-                    href="#"
-                    className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-cream hover:bg-gray-50"
-                >
-                    Next
-        </a>
-            </div>
-            <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+
+        <div className="flex justify-center justify-around" >
+            
+            {products.map ?((product) => (
                 <div>
-                    <p className="text-sm text-gray-700">
-                        Showing <span className="font-medium">1</span> to <span className="font-medium">25</span> of{' '}
-                        <span className="font-medium">100</span> results
-            </p>
+                            key={product._id}
+                            _id={product._id}
+                            image={product.image}
+                            description={product.description}
+                            title={product.title}
+                            price={product.price}
+                            quantity={product.quantity}
                 </div>
-                <div>
-                    <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-cream text-sm font-medium text-gray-500 hover:bg-gray-50"
-                        >
-                            <span className="sr-only">Previous</span>
-                            <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-                        </a>
-                        {/* Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-cream border-gray-300 text-gray-500 hover:bg-gray-50" */}
-                        <a
-                            href="#"
-                            aria-current="page"
-                            className="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            1
-            </a>
-                        <a
-                            href="#"
-                            className="bg-cream border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            2
-            </a>
-                        <a
-                            href="#"
-                            className="bg-cream border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            3
-            </a>
-                        <span className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-cream text-sm font-medium text-gray-700">
-                            ...
-            </span>
-                        <a
-                            href="#"
-                            className="bg-cream border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            8
-            </a>
-                        <a
-                            href="#"
-                            className="bg-cream border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            9
-            </a>
-                        <a
-                            href="#"
-                            className="bg-cream border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                        >
-                            10
-            </a>
-                        <a
-                            href="#"
-                            className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-cream text-sm font-medium text-gray-500 hover:bg-gray-50"
-                        >
-                            <span className="sr-only">Next</span>
-                            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-                        </a>
-                    </nav>
-                </div>
-            </div>
+            )): (
+                <h3>You haven't added any products yet!</h3>
+            )}
+            <button onClick={gotoPrevious}>Previous</button>
+            {pages.map((pageIndex) => (
+                <button key={pageIndex} onClick={() => setPageNumber(pageIndex)}>
+                    {pageIndex + 1}
+                </button>
+            ))}
+            <h3>Page  {pageNumber + 1} of 10</h3>
+            <button onClick={gotoNext}>Next</button>
         </div>
-    )
-}
+    );
+            }
+
+
+export default Pagination;
