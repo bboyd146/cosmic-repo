@@ -22,7 +22,7 @@ import Payment from './pages/Payment';
 import Shipping from './pages/Shipping';
 import Contact from './pages/Contact';
 import Company from './pages/Company';
-
+import Success from './pages/Success';
 
 
 
@@ -120,6 +120,13 @@ function App() {
                 <Switch>
                   <Route path="/Company">
                     <Company />
+                  </Route>
+                </Switch>
+              </AnimatePresence>
+              <AnimatePresence>
+                <Switch>
+                  <Route path="/Success">
+                    <Success />
                   </Route>
                 </Switch>
               </AnimatePresence>
