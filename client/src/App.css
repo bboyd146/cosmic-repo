@@ -22,7 +22,7 @@ body {
 
 .App-header{
     height: 140px;
-    background-color: rgb(34, 34, 55);
+    background-color: rgb(112, 138, 138);
     border-radius: 20px;
     /* box-shadow: 0px 2px 20px  #d2044f; */
     
@@ -47,3 +47,6 @@ a {
 #linkId {
     color: #d4115d;
 }
+
+
+  

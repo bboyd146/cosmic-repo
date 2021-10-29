@@ -62,7 +62,7 @@ db.once('open', async () => {
             genre: genre[4]._id,
             description:
                 'The Bridge is one of the albums for which the long-active and prolific Rollins receives his greatest praise',
-            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635176484/cosmic%20records/Sonny_Rollins_The_Bridge_opgwve.png',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635176484/cosmic%20records/Sonny_Rollins_The_Bridge_opgwve.png',
             price: 30.00,
             quantity: 1
         },
@@ -193,7 +193,7 @@ db.once('open', async () => {
             quantity: 1
         },
         {
-            title: 'The King Khan & The BBQ Show - What\'s For Dinner\?',
+            title: 'The King Khan & BBQ Show - What\'s For Dinner\?',
             genre: genre[0]._id,
             description:
                 'What\'s for Dinner\? is the second studio album by garage rock band The King Khan \& BBQ Show',
@@ -351,7 +351,7 @@ db.once('open', async () => {
             description:
                 'Mothership Connection is the fourth album by American funk band Parliament. This concept album is often rated among the best Parliament-Funkadelic releases, and was the first to feature horn players Maceo Parker and Fred Wesley, who had previously backed James Brown in the J.B.\'s.',
             image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456183/cosmic%20records/ParliamentMothershipConnection_nsxxki.jpg',
-            price: 10.00,
+            price: 50.00,
             quantity: 1
         },
         {
@@ -378,6 +378,114 @@ db.once('open', async () => {
             description:
                 'Life\'s Too Good is the debut studio album by Icelandic alternative rock group The Sugarcubes. The album was an unexpected success and brought international attention for the band, especially to lead singer Björk, who would launch a successful solo career in 1993.',
             image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635456970/cosmic%20records/The_Sugarcubes_-_Life_s_Too_Good_o990xk.png',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Tortoise - Standards',
+            genre: genre[2]._id,
+            description:
+                'Standards is the fourth studio album by American post-rock band Tortoise.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635457083/cosmic%20records/Tortoise-standards_bpqqdx.jpg',
+            price: 35.00,
+            quantity: 1
+        },
+        {
+            title: 'Sam & Dave - Soul Men',
+            genre: genre[7]._id,
+            description:
+                'Soul Men is an album by the R&B duo Sam & Dave, released in 1967. The album launched the hit single "Soul Man", which peaked #2 on the "Pop Singles" chart. The song won Sam & Dave a Grammy in 1967 for "Best R&B Group, Vocal or Instrumental"',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635524452/cosmic%20records/Soul_Men__Sam___Dave_album_-_cover_art_xkch2b.jpg',
+            price: 30.00,
+            quantity: 1
+        },
+        {
+            title: 'Kid 606 - Kill Sound Before Sound Kills You',
+            genre: genre[3]._id,
+            description:
+                'Kill Sound Before Sound Kills You is a 2003 studio album by American electronic musician Miguel Depedro under his alias of Kid 606. The album has a working history of spastic club music, from rave-era hardcore to jungle to gabba style',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635525031/cosmic%20records/Killsoundbefore_npfdhy.jpg',
+            price: 20.00,
+            quantity: 1
+        },
+        {
+            title: 'Parliament - The Clones of Dr. Funkenstien',
+            genre: genre[8]._id,
+            description:
+                'The Clones of Dr. Funkenstein is an album by funk band Parliament, released in September 1976. The album is notable for featuring horn arrangements by ex-James Brown band member, Fred Wesley.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635525296/cosmic%20records/Parliament-The_Clones_of_Dr._Funkenstein__album_cover_s9qfwo.jpg',
+            price: 45.00,
+            quantity: 1
+        },
+        {
+            title: 'Smashing Pumpkins - Gish',
+            genre: genre[0]._id,
+            description:
+                'Gish is the debut studio album by American alternative rock band the Smashing Pumpkins, released in May 1991 through Caroline Records. Frontman Billy Corgan has variously described Gish as a "very spiritual album" and "an album about spiritual ascension".',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635525625/cosmic%20records/SmashingPumpkins-Gish_sp0zh0.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Ray Charles - I\'m All Yours-Baby!',
+            genre: genre[7]._id,
+            description:
+                'I\'m All Yours Baby! is a studio album by Ray Charles released in 1969 on Charles\' Tangerine Records label',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635526224/cosmic%20records/RayCharles_ImAllYoursBaby_lgowj3.jpg',
+            price: 40.00,
+            quantity: 1
+        },
+        {
+            title: 'Demdike Stare - Wonderland',
+            genre: genre[3]._id,
+            description:
+                'Continuing the beat-oriented experiments of their 12” club tunes, the electronic duo Demdike Stare blend their doomy aesthetic with dancehall cadences for their most compelling full-length.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635526761/cosmic%20records/006ada49_lus1af.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Blu & Exile - Give Me My Flowers While I Can Still Smell Them Instrumentals',
+            genre: genre[1]._id,
+            description:
+                'The instrumentals to Blu and Exile’s modern classic Give Me My Flowers While I Can Still Smell Them. Includes unreleased, non-album instrumental “Enough”.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635527236/cosmic%20records/Blu_Exile_neorm0.jpg',
+            price: 25.00,
+            quantity: 1
+        },
+        {
+            title: 'Kurtis Blow - The Breaks',
+            genre: genre[1]._id,
+            description:
+                '"The Breaks" is a 1980 single by American rapper Kurtis Blow from his self-titled debut album. It peaked at #87 on the Billboard Hot 100. It was the first certified gold rap song, and the second certified gold 12-inch single.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635527464/cosmic%20records/Kurtis_Blow_-_The_Breaks_aizkl3.jpg',
+            price: 75.00,
+            quantity: 1
+        },
+        {
+            title: 'Def Leppard - Pyromania',
+            genre: genre[0]._id,
+            description:
+                'Pyromania is the third studio album by English rock band Def Leppard. The album was a shift away from the band\'s traditional heavy metal roots toward a more radio-friendly sound, finding massive mainstream success.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/v1635527795/cosmic%20records/Def_Leppard_-_Pyromania_tj4qhb.jpg',
+            price: 30.00,
+            quantity: 1
+        },
+        {
+            title: 'Bootsy\'s Rubber Band - Body Slam',
+            genre: genre[8]._id,
+            description:
+                'Body Slam" is a song that was recorded by Bootsy\'s Rubber Band, co-written by Bootsy Collins and keyboardist Joel "Razor Sharp" Johnson. The b-side of "Body Slam" is "I\'d Rather Be With You"!',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635528756/cosmic%20records/Body_Slam_gfcbww.jpg',
+            price: 20.00,
+            quantity: 1
+        },
+        {
+            title: 'Black Sabbath - Paranoid',
+            genre: genre[0]._id,
+            description:
+                'Paranoid is the second studio album by the English heavy metal band Black Sabbath, released in September 1970 through Vertigo Records in England and Warner Bros. Records in the US. It contains several of the band\'s signature songs, including "Iron Man", "War Pigs" and the title track "Paranoid". It is often cited as an influential album in the early development of the heavy metal genre.',
+            image: 'https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635530086/cosmic%20records/Black_Sabbath_-_Paranoid_neprgt.jpg',
             price: 25.00,
             quantity: 1
         },
