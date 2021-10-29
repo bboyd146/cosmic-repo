@@ -26,5 +26,8 @@ module.exports = {
   fontFamily: {
   logo: ['Goblin One'],
 },
-}
+// screens: {
+//   'phone': '360px',
+// }}
+  }
 }

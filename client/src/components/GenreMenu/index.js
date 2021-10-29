@@ -94,7 +94,7 @@ function GenreMenu() {
 
 
     return (
-        <div className="bg-cream col-span-1 flex">
+        <div className="bg-cream lg:col-span-1 xl:col-span-1 sm:col-span-4 md:col-span-6">
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -164,21 +164,22 @@ function GenreMenu() {
                                                     </h3>
                                                     <Disclosure.Panel className="pt-6">
                                                         <div className="space-y-6">
-                                                            {section.options.map((option, optionIdx) => (
-                                                                <div key={option.value} className="flex items-center">
+                                                            {genres.map((item) => (
+                                                                <div key={item.id} className="flex items-center">
                                                                     <input
-                                                                        id={`filter-mobile-${section.id}-${optionIdx}`}
-                                                                        name={`${section.id}[]`}
-                                                                        defaultValue={option.value}
-                                                                        type="checkbox"
-                                                                        defaultChecked={option.checked}
-                                                                        className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                    id={`${item.id}`}
+                                                                    name={`${item.name}[]`}
+                                                                    type="checkbox"
+                                                                    className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                    onClick={(e) => {
+                                                                        handleClick(e, item._id);
+                                                                    }}
                                                                     />
                                                                     <label
-                                                                        htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                                                        htmlFor={`filter-mobile-${item.id}`}
                                                                         className="ml-3 min-w-0 flex-1 text-gray-500"
                                                                     >
-                                                                        {option.label}
+                                                                        {item.name}
                                                                     </label>
                                                                 </div>
                                                             ))}

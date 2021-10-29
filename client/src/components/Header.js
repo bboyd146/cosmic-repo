@@ -12,15 +12,15 @@ import React from 'react';
 // import Cart from './pages/Cart';
 
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+// import { Fragment } from 'react'
+import { Popover } from '@headlessui/react'
+// import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'Inventory', href: '#' },
-    { name: 'Cart', href: '#' },
-]
+// const navigation = [
+//     { name: 'Home', href: '/' },
+//     { name: 'Inventory', href: '/Inventory' },
+//     { name: 'Cart', href: '/Cart' },
+// ]
 
 export default function Header() {
     return (
@@ -38,7 +38,7 @@ export default function Header() {
                     </svg>
                     <Popover>
                         <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-                            <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+                            {/* <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                     <div className="flex items-center justify-between w-full md:w-auto">
                                         <div className="-mr-2 flex items-center lg:hidden">
@@ -50,10 +50,10 @@ export default function Header() {
                                     </div>
                                 </div>
 
-                            </nav>
+                            </nav> */}
                         </div>
 
-                        <Transition
+                        {/* <Transition
                             as={Fragment}
                             enter="duration-150 ease-out"
                             enterFrom="opacity-0 scale-95"
@@ -94,14 +94,14 @@ export default function Header() {
                                         ))}
                                     </div>
                                     <a
-                                        href="#"
+                                        href="/Login"
                                         className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
                                     >
                                         Log in
                                     </a>
                                 </div>
                             </Popover.Panel>
-                        </Transition>
+                        </Transition> */}
                     </Popover>
 
 
