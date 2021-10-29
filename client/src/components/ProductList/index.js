@@ -13,7 +13,7 @@ function ProductList() {
     const [state, dispatch] = useStoreContext();
 
 
-    const { currentGenre } = state;
+    const { currentGenres } = state;
 
 
     const { loading, data } = useQuery(QUERY_PRODUCTS);
@@ -38,12 +38,12 @@ function ProductList() {
     }, [data, loading, dispatch]);
 
     function filterProducts() {
-        if (!currentGenre) {
+        if (currentGenres.length === 0) {
             return state.products;
         }
 
         return state.products.filter(
-            (product) => product.genre._id === currentGenre
+            (product) => currentGenres.includes(product.genre._id)
         );
     }
 
@@ -53,7 +53,6 @@ function ProductList() {
             {state.products.length ? (
                 <div className="  ">
                     <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {/* <GenreMenu /> */}
                         {filterProducts().map((product) => (
                             <ProductItem
                             key={product._id}
