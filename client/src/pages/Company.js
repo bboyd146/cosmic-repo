@@ -22,7 +22,7 @@ function Company() {
                                 <div className="px-6 mt-16">
                                     <div className="font-bold text-3xl text-green text-center pb-1">Josh Nolan</div>
                                     <p className="text-blue text-sm text-center">Owner Operator</p>
-                                    <p className="text-center text-green text-base pt-3 font-normal">The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.</p>
+                                    <p className="text-center text-green text-base pt-3 font-normal">"You don't want to get mixed up with a guy like me. I'm a loner, Dottie. A rebel."</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
                                         <a href="javascript:void(0)" className="mx-5">
                                             <div>
@@ -45,7 +45,7 @@ function Company() {
                                 <div className="px-6 mt-16">
                                     <div className="font-bold text-3xl text-green text-center pb-1">Bradley Boyd</div>
                                     <p className="text-blue text-sm text-center">Developer/Designer</p>
-                                    <p className="text-center text-green text-base pt-3 font-normal">The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.</p>
+                                    <p className="text-center text-green text-base pt-3 font-normal">With emphasis on innovation and technology we pride ourselves in product design and development.</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
                                         <a href="javascript:void(0)" className="mx-5">
                                             <div>
@@ -62,13 +62,13 @@ function Company() {
                             <div className="rounded-2xl overflow-hidden shadow-md bg-dark">
                                 <div className="absolute -mt-20 w-full flex justify-center">
                                     <div className="h-32 w-32">
-                                        <img src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif" alt className="rounded-full object-cover h-full w-full shadow-md" />
+                                        <img src="https://res.cloudinary.com/cosmic-records/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1635548562/cosmic%20records/Image_from_iOS_u3udjd.jpg" alt className="rounded-full object-cover h-full w-full shadow-md" />
                                     </div>
                                 </div>
                                 <div className="px-6 mt-16">
                                     <div className="font-bold text-3xl text-green text-center pb-1">Osvaldo Zavaleta</div>
                                     <p className="text-blue text-sm text-center">Developer/Designer</p>
-                                    <p className="text-center text-green text-base pt-3 font-normal">The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.</p>
+                                    <p className="text-center text-green text-base pt-3 font-normal">Product designer with interests in immersive computing and emerging technologies. Able to take ideas and give them a life.</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
                                         <a href="javascript:void(0)" className="mx-5">
                                             <div>
