@@ -23,7 +23,6 @@ import Shipping from './pages/Shipping';
 import Contact from './pages/Contact';
 import Company from './pages/Company';
 import Success from './pages/Success';
-import CheckoutWithStripe from './components/CheckoutWithStripe';
 
 
 
@@ -58,7 +57,6 @@ function App() {
                 <Switch>
                   <Route exact path="/">
                     <Home />
-                    <CheckoutWithStripe />
                   </Route>
                 </Switch>
               </AnimatePresence>

@@ -5,9 +5,11 @@ import { useStoreContext } from "../utils/GlobalState";
 import { loadStripe } from "@stripe/stripe-js";
 import { QUERY_CHECKOUT } from '../utils/queries';
 import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
-const stripePromise = loadStripe('pk_test_51JnmXxIaPmg7X2tXIs50xiSEsvQTO6xXK9ATsTwz5t8glA310PxQ2kHcH9OM4fYhSWfqf3FC9ggQiRROISBiNm3k0098ZOofsg');
+import CheckoutWithStripe from "../components/CheckoutWithStripe";
+import { Link } from "react-router-dom";
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_STRIPE_KEY);
 
-const Payment = ({submitCheckout}) => {
+const Payment = ({ submitCheckout }) => {
     const countries = ["China", "Russia", "UK", "United States"];
     const [menu, setMenu] = useState(false);
     const [country, setCountry] = useState("United States");
@@ -137,13 +139,11 @@ const Payment = ({submitCheckout}) => {
                                 <input className="border rounded-bl rounded-br border-gray-300 p-4 w-full text-base leading-4 placeholder-gray-600 text-gray-600" type="text" placeholder="ZIP" />
                             </div>
 
-                            <a href="/Success" className="mt-8 border border-transparent hover:border-gray-300 bg-gray-900 hover:bg-white text-white hover:text-gray-900 flex justify-center items-center py-4 rounded w-full">
-                                <div>
-                                    <p className="text-base leading-4">Pay Now</p>
-                                </div>
-                            </a>
+                            <Link to="/" className="mt-8 border border-transparent hover:border-cream bg-cream hover:bg-cream text-white hover:text-gray-900 flex justify-center items-center py-4 rounded w-full">
+                                <CheckoutWithStripe />
+                            </Link>
                             <div>
-                            <p className="text-base leading-4">{getCheckout}</p>
+                                <p className="text-base leading-4">{getCheckout}</p>
                             </div>
                         </div>
                     </div>
