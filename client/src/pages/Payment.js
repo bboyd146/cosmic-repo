@@ -1,9 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLazyQuery } from '@apollo/client';
+import { idbPromise } from "../utils/helpers";
+import { useStoreContext } from "../utils/GlobalState";
+import { loadStripe } from "@stripe/stripe-js";
+import { QUERY_CHECKOUT } from '../utils/queries';
+import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
+const stripePromise = loadStripe('pk_test_51JnmXxIaPmg7X2tXIs50xiSEsvQTO6xXK9ATsTwz5t8glA310PxQ2kHcH9OM4fYhSWfqf3FC9ggQiRROISBiNm3k0098ZOofsg');
 
-const Payment = () => {
+const Payment = ({submitCheckout}) => {
     const countries = ["China", "Russia", "UK", "United States"];
     const [menu, setMenu] = useState(false);
     const [country, setCountry] = useState("United States");
+    const [state, dispatch] = useStoreContext();
+    const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+    useEffect(() => {
+        if (data) {
+            stripePromise.then((res) => {
+                res.redirectToCheckout({ sessionId: data.checkout.session });
+            });
+        }
+    }, [data]);
+
+    useEffect(() => {
+        async function getCart() {
+            const cart = await idbPromise('cart', 'get');
+            dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+        }
+
+        if (!state.cart.length) {
+            getCart();
+        }
+    }, [state.cart.length, dispatch]);
+
+
+
+    function submitCheckout() {
+        const productIds = [];
+
+        state.cart.forEach((item) => {
+            for (let i = 0; i < item.purchaseQuantity; i++) {
+                productIds.push(item._id);
+            }
+        });
+
+        getCheckout({
+            variables: { products: productIds },
+        });
+    }
 
     const changeText = (e) => {
         setMenu(false);
@@ -98,12 +142,15 @@ const Payment = () => {
                                     <p className="text-base leading-4">Pay Now</p>
                                 </div>
                             </a>
+                            <div>
+                            <p className="text-base leading-4">{getCheckout}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    );
+    )
 };
 
 export default Payment;
