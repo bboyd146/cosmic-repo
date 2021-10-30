@@ -23,6 +23,7 @@ module.exports = {
     'dark': 'rgb(34, 34, 55)',
     'green': 'rgb(86, 177, 168)',
     'blue': '#718096',
+    'frog': 'rgb(6, 157, 74)',
   }
 },
 
