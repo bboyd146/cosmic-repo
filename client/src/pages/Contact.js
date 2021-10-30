@@ -42,11 +42,11 @@ export default function Contact() {
                             />
                             <h2 className="mt-6 text-center text-3xl font-extrabold text-pink">Reach Out!</h2>
                         </div>
-                            <div className="rounded-md shadow-sm -space-y-px">
+                            <div className="rounded-md content-around ">
                                 <div>
                                     <label
                                         htmlFor="first-name"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm mt-5 mb-1 font-medium text-gray-700"
                                     >
                                         First name
                                     </label>
@@ -62,7 +62,7 @@ export default function Contact() {
                                 <div>
                                     <label
                                         htmlFor="last-name"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm mt-5 mb-1 font-medium text-gray-700"
                                     >
                                         Last name
                                     </label>
@@ -78,7 +78,7 @@ export default function Contact() {
                                 <div>
                                     <label
                                         htmlFor="email-address"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm mt-5 mb-1 font-medium text-gray-700"
                                     >
                                         Email address
                                     </label>
@@ -94,7 +94,7 @@ export default function Contact() {
                                 <div>
                                     <label
                                         htmlFor="order-number"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm mt-5 mb-1 font-medium text-gray-700"
                                     >
                                         Order number
                                     </label>
@@ -109,7 +109,7 @@ export default function Contact() {
                                 <div>
                                     <label
                                         htmlFor="about"
-                                        className="block text-sm font-medium text-gray-700"
+                                        className="block text-sm mt-5 mb-1 font-medium text-gray-700"
                                     >
                                         Message
                                     </label>
@@ -122,7 +122,7 @@ export default function Contact() {
                                         />
 
                                     </div>
-                                    <p className="mt-2 text-sm text-gray-500">
+                                    <p className="mt-5 mb-2 text-sm text-gray-500">
                                         Please provide a brief description of your problem, concern, or suggestion.
                                     </p>
                                 </div>
@@ -169,11 +169,11 @@ export default function Contact() {
                             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                         >
-                            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                            <div className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                                 <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                     <div className="sm:flex sm:items-start">
                                         <div className="mx-auto flex-shrink-0 flex items-center justify-center h-9 w-9 rounded-full bg-green-200 sm:mx-0 sm:h-10 sm:w-10">
-                                            <CheckCircleIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
+                                            <CheckCircleIcon className="h-6 w-6 text-frog" aria-hidden="true" />
                                         </div>
                                         <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                             <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
@@ -189,10 +189,10 @@ export default function Contact() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                <div className="bg-gray px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                     <button
                                         type="button"
-                                        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-200 text-base font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
+                                        className="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-frog text-base font-medium text-white hover:bg-frog focus:outline-none   focus:ring-green sm:ml-3 sm:w-auto sm:text-sm"
                                         onClick={() => setOpen(false)}
                                     >
                                         Close
