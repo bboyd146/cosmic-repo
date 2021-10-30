@@ -23,7 +23,7 @@ class CheckoutWithStripe extends React.Component {
     render() {
         return (
             <StripeCheckout
-                amount = {10.00}
+                amount = {500.00}
                 name="STRIPE_INTEGRATION"
                 // functions defined above can be used to add more information while making the API call.
                 // description={`Order of ${computeQuantity(cart)} items!`}

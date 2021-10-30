@@ -21,39 +21,6 @@ function classNames(...classes) {
 }
 
 const NavTabs = ({ cartOpen = false }) => {
-    // const [state, dispatch] = useStoreContext();
-
-
-    //     function toggleCart() {
-
-    //         dispatch({ type: TOGGLE_CART });
-    //       }
-    // function showNavigation() {
-    //     {
-    //         Auth.loggedIn() ? (
-    //             <div className="flex flex-wrap">
-    //                 <Link to="/"><FaHome size={56} /></Link>
-    //                 <Link to="/Inventory"><BsVinylFill size={56} /></Link>
-    //                 <Link to="/Login"><FaUserAstronaut size={56} /></Link>
-    //                 <Link to="/Cart"><MdOutlineShoppingCart size={56} /></Link>
-    //                 {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-    //                 <Link to="/" onClick={() => Auth.logout()}>
-    //                     <RiLogoutCircleRFill size={56} />
-    //                 </Link>
-    //             </div>
-    //         )
-    //             : (
-    //                 <div className="flex flex-wrap">
-    //                     <Link to="/"><FaHome size={56} /></Link>
-    //                     <Link to="/Inventory"><BsVinylFill size={56} /></Link>
-    //                     <Link to="/Login"><FaUserAstronaut size={56} /></Link>
-    //                     <Link to="/Cart"><MdOutlineShoppingCart size={56} /></Link>
-    //                 </div>
-    //             );
-    //     }
-    // }
-
-
     return (
         <>
         <Popover>
