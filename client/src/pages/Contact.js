@@ -2,6 +2,7 @@ import emailjs from "emailjs-com";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { CheckCircleIcon } from "@heroicons/react/outline";
+import { motion } from 'framer-motion'
 
 export default function Contact() {
     const [open, setOpen] = useState(false);
@@ -12,10 +13,10 @@ export default function Contact() {
 
         emailjs
             .sendForm(
-                "service_b9hk5lg",
-                "template_abhucbw",
+                "service_2ph0w0r",
+                "template_3ceg8be",
                 e.target,
-                "user_75mSwFSIJJ1WwiOulm8zc"
+                "user_aYpTphZMl2I0bpjXbL7u4"
             )
             .then(
                 (result) => {
@@ -30,6 +31,12 @@ export default function Contact() {
 
     return (
         <>
+        <motion.div 
+        exit={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        >
             <div className="mt-5 md:mt-0 md:col-span-2">
                 <form onSubmit={sendEmail}>
                     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -130,7 +137,7 @@ export default function Contact() {
                                 <div>
                                     <button
                                         type="submit"
-                                        className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-pink hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-pink hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink"
                                         onClick={() => setOpen(true)}
                                     >
                                         Send Message
@@ -203,6 +210,7 @@ export default function Contact() {
                     </div>
                 </Dialog>
             </Transition.Root>
+            </motion.div>
         </>
     );
 }
