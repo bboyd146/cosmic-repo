@@ -11,7 +11,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-const stripePromise = loadStripe('pk_test_51JnmXxIaPmg7X2tXIs50xiSEsvQTO6xXK9ATsTwz5t8glA310PxQ2kHcH9OM4fYhSWfqf3FC9ggQiRROISBiNm3k0098ZOofsg');
+const stripePromise = loadStripe(process.env.PUBLISHABLE_STRIPE_KEY);
 
 
 
