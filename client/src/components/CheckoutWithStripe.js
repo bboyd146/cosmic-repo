@@ -9,7 +9,6 @@ function computeQuantity(cart) {
 
 class CheckoutWithStripe extends React.Component {
     onToken = (res) => {
-        console.log(res)
         fetch('/save-stripe-token', {
             method: 'POST',
             body: JSON.stringify(res),
@@ -25,8 +24,6 @@ class CheckoutWithStripe extends React.Component {
             <StripeCheckout
                 amount = {500.00}
                 name="STRIPE_INTEGRATION"
-                // functions defined above can be used to add more information while making the API call.
-                // description={`Order of ${computeQuantity(cart)} items!`}
                 image="./me.jpeg"
                 stripeKey={process.env.REACT_APP_PUBLISHABLE_STRIPE_KEY}
                 currency="USD"
