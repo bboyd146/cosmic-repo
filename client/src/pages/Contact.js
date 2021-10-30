@@ -11,21 +11,12 @@ export default function Contact() {
     function sendEmail(e) {
         e.preventDefault();
 
-        emailjs
-            .sendForm(
-                "service_2ph0w0r",
-                "template_3ceg8be",
-                e.target,
-                "user_aYpTphZMl2I0bpjXbL7u4"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
+        emailjs.sendForm(process.env.REACT_APP_SERVICE, process.env.REACT_APP_TEMPLATE, e.target, process.env.REACT_APP_USER)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
         e.target.reset();
     }
 
