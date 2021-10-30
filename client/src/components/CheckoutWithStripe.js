@@ -28,7 +28,7 @@ class CheckoutWithStripe extends React.Component {
                 // functions defined above can be used to add more information while making the API call.
                 // description={`Order of ${computeQuantity(cart)} items!`}
                 image="./me.jpeg"
-                stripeKey={process.env.PUBLISHABLE_STRIPE_KEY}
+                stripeKey={process.env.REACT_APP_PUBLISHABLE_STRIPE_KEY}
                 currency="USD"
                 email='USER_EMAIL'
                 token={this.onToken}/>          
