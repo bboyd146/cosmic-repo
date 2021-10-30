@@ -1,33 +1,49 @@
-import emailjs from 'emailjs-com';
-import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useRef, useState } from 'react';
-import {CheckCircleIcon} from '@heroicons/react/outline';
+import emailjs from "emailjs-com";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useRef, useState } from "react";
+import { CheckCircleIcon } from "@heroicons/react/outline";
 
 export default function Contact() {
-
-    const [open, setOpen] = useState(false)
-    const cancelButtonRef = useRef(null)
+    const [open, setOpen] = useState(false);
+    const cancelButtonRef = useRef(null);
 
     function sendEmail(e) {
         e.preventDefault();
 
-        emailjs.sendForm('service_b9hk5lg', 'template_abhucbw', e.target, 'user_75mSwFSIJJ1WwiOulm8zc')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        emailjs
+            .sendForm(
+                "service_b9hk5lg",
+                "template_abhucbw",
+                e.target,
+                "user_75mSwFSIJJ1WwiOulm8zc"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
         e.target.reset();
-    };
+    }
 
     return (
         <>
             <div className="mt-5 md:mt-0 md:col-span-2">
                 <form onSubmit={sendEmail}>
-                    <div className="shadow overflow-hidden sm:rounded-md">
-                        <div className="px-4 py-5 bg-white sm:p-6">
-                            <div className="grid grid-cols-6 gap-6">
-                                <div className="col-span-6 sm:col-span-3">
+                    <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-md w-full space-y-8">
+                        <div>
+                            <img
+                                className="mx-auto h-12 w-auto"
+                                src="https://res.cloudinary.com/cosmic-records/image/upload/c_scale,h_300,w_300/v1635299182/cosmic%20records/Cosmic_Records_4_v9sdkz.png"
+                                alt="Workflow"
+                            />
+                            <h2 className="mt-6 text-center text-3xl font-extrabold text-pink">Reach Out!</h2>
+                        </div>
+                            <div className="rounded-md shadow-sm -space-y-px">
+                                <div>
                                     <label
                                         htmlFor="first-name"
                                         className="block text-sm font-medium text-gray-700"
@@ -43,7 +59,7 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-3">
+                                <div>
                                     <label
                                         htmlFor="last-name"
                                         className="block text-sm font-medium text-gray-700"
@@ -59,7 +75,7 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-3">
+                                <div>
                                     <label
                                         htmlFor="email-address"
                                         className="block text-sm font-medium text-gray-700"
@@ -75,7 +91,7 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-3">
+                                <div>
                                     <label
                                         htmlFor="order-number"
                                         className="block text-sm font-medium text-gray-700"
@@ -90,7 +106,7 @@ export default function Contact() {
                                     />
                                 </div>
 
-                                <div className="col-span-6 sm:col-span-6">
+                                <div>
                                     <label
                                         htmlFor="about"
                                         className="block text-sm font-medium text-gray-700"
@@ -104,22 +120,23 @@ export default function Contact() {
                                             rows={3}
                                             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
                                         />
+
                                     </div>
                                     <p className="mt-2 text-sm text-gray-500">
                                         Please provide a brief description of your problem, concern, or suggestion.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                            <button
-                                type="submit"
-                                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                onClick={() => setOpen(true)}
-                            >
-                                Send Message
-                            </button>
+                                <div>
+                                    <button
+                                        type="submit"
+                                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        onClick={() => setOpen(true)}
+                                    >
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -188,4 +205,4 @@ export default function Contact() {
             </Transition.Root>
         </>
     );
-};
+}
