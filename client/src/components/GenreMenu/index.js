@@ -79,7 +79,7 @@ function GenreMenu() {
         const { checked } = e.target
         let newGenres = [];
         console.log(currentGenres);
-        if(checked && !currentGenres.includes(id)) {
+        if (checked && !currentGenres.includes(id)) {
             newGenres = [...currentGenres, id];
         } else {
             newGenres = currentGenres.filter(genre => genre !== id)
@@ -136,15 +136,7 @@ function GenreMenu() {
                                 {/* Filters */}
                                 <form className="mt-4 border-t border-gray-200">
                                     <h3 className="sr-only">Categories</h3>
-                                    {/* <ul role="list" className="font-medium text-gray-900 px-2 py-3">
-                                        {subCategories.map((genre) => (
-                                            <li key={genre.name}>
-                                                <a href={genre.href} className="block px-2 py-3">
-                                                    {genre.name}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul> */}
+
 
                                     {filters.map((section) => (
                                         <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
@@ -167,13 +159,13 @@ function GenreMenu() {
                                                             {genres.map((item) => (
                                                                 <div key={item.id} className="flex items-center">
                                                                     <input
-                                                                    id={`${item.id}`}
-                                                                    name={`${item.name}[]`}
-                                                                    type="checkbox"
-                                                                    className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                                                                    onClick={(e) => {
-                                                                        handleClick(e, item._id);
-                                                                    }}
+                                                                        id={`${item.id}`}
+                                                                        name={`${item.name}[]`}
+                                                                        type="checkbox"
+                                                                        className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                                                        onClick={(e) => {
+                                                                            handleClick(e, item._id);
+                                                                        }}
                                                                     />
                                                                     <label
                                                                         htmlFor={`filter-mobile-${item.id}`}
@@ -202,13 +194,7 @@ function GenreMenu() {
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">
                                 <div>
-                                    {/* <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                                        Sort
-                                        <ChevronDownIcon
-                                            className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                                            aria-hidden="true"
-                                        />
-                                    </Menu.Button> */}
+
                                 </div>
 
                                 <Transition
@@ -267,13 +253,7 @@ function GenreMenu() {
                             {/* Filters */}
                             <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
-                                {/* <ul role="list" className="text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200">
-                                    {subCategories.map((category) => (
-                                        <li key={category.name}>
-                                            <a href={category.href}>{category.name}</a>
-                                        </li>
-                                    ))}
-                                </ul> */}
+
 
                                 {filters.map((section) => (
                                     <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">

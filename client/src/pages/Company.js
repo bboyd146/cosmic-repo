@@ -24,7 +24,7 @@ function Company() {
                                     <p className="text-blue text-sm text-center">Owner Operator</p>
                                     <p className="text-center text-green text-base pt-3 font-normal">"You don't want to get mixed up with a guy like me. I'm a loner, Dottie. A rebel."</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" className="mx-5">
+                                        <a href="https://github.com/Nolan1979" rel="noreferrer" target="_blank" className="mx-5">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
                                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
@@ -47,7 +47,7 @@ function Company() {
                                     <p className="text-blue text-sm text-center">Developer/Designer</p>
                                     <p className="text-center text-green text-base pt-3 font-normal">With emphasis on innovation and technology we pride ourselves in product design and development.</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" className="mx-5">
+                                        <a href="https://github.com/bboyd146" rel="noreferrer" target="_blank" className="mx-5">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
                                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
@@ -70,7 +70,7 @@ function Company() {
                                     <p className="text-blue text-sm text-center">Developer/Designer</p>
                                     <p className="text-center text-green text-base pt-3 font-normal">Product designer with interests in immersive computing and emerging technologies. Able to take ideas and give them a life.</p>
                                     <div className="w-full flex justify-center pt-5 pb-5">
-                                        <a href="javascript:void(0)" className="mx-5">
+                                        <a href="https://github.com/zavaletaosv" rel="noreferrer" target="_blank" className="mx-5">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
                                                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
