@@ -1,5 +1,7 @@
 # cosmic-repo
 
+![cosmic-records herokuapp com_](https://user-images.githubusercontent.com/82745040/139523057-31cca515-522e-42bb-8e7b-8111ce74cd25.png)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
@@ -7,21 +9,18 @@ This project is designed to allow music lovers and collectors to search and purc
 
 ## Table of Contents
 
+- [Deployed](#Deployed)
 - [Installation](#Installation)
-- [Usage](#Usage)
 - [Credits](#Credits)
 - [License](#License)
 - [Badges](#Badges)
-- [Features](#Features)
-- [How to Contribute](#How-to-Contribute)
-- [Tests](#Tests)
 - [Questions](#Questions)
+
+## Deployed
+https://cosmic-records.herokuapp.com/
 
 ## Installation 
 npm install
-
-## Usage 
-
 
 ## Credits 
 Collaborations of this project include the instructional staff, TAs, and fellow classmates in the Rice University Coding Bootcamp 2021 Cohort.
@@ -39,13 +38,6 @@ Collaborations of this project include the instructional staff, TAs, and fellow 
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Features
-
-
-## How to Contribute
-
-
-## Tests
 
 
 ## Questions
