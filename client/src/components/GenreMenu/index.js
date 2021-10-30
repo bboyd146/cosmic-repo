@@ -110,7 +110,6 @@ function GenreMenu() {
                         >
                             <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
                         </Transition.Child>
-
                         <Transition.Child
                             as={Fragment}
                             enter="transition ease-in-out duration-300 transform"
@@ -132,12 +131,9 @@ function GenreMenu() {
                                         <XIcon className="h-6 w-6" aria-hidden="true" />
                                     </button>
                                 </div>
-
                                 {/* Filters */}
                                 <form className="mt-4 border-t border-gray-200">
                                     <h3 className="sr-only">Categories</h3>
-
-
                                     {filters.map((section) => (
                                         <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
                                             {({ open }) => (
@@ -186,17 +182,13 @@ function GenreMenu() {
                         </Transition.Child>
                     </Dialog>
                 </Transition.Root>
-
                 <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200">
                         <h1 className="text-4xl font-extrabold tracking-tight text-indigo-600">Sort By</h1>
-
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">
                                 <div>
-
                                 </div>
-
                                 <Transition
                                     as={Fragment}
                                     enter="transition ease-out duration-100"
@@ -228,7 +220,6 @@ function GenreMenu() {
                                     </Menu.Items>
                                 </Transition>
                             </Menu>
-
                             <button type="button" className="p-2 -m-2 ml-5 sm:ml-7 text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">View grid</span>
                                 <ViewGridIcon className="w-5 h-5" aria-hidden="true" />
@@ -243,18 +234,14 @@ function GenreMenu() {
                             </button>
                         </div>
                     </div>
-
                     <section aria-labelledby="products-heading" className="pt-6 pb-24">
                         <h2 id="products-heading" className="sr-only">
                             Products
                         </h2>
-
                         <div className="grid grid-cols-1  gap-x-8 gap-y-10">
                             {/* Filters */}
                             <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
-
-
                                 {filters.map((section) => (
                                     <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
                                         {({ open }) => (
