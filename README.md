@@ -17,7 +17,7 @@ This project is designed to allow music lovers and collectors to search and purc
 - [Questions](#Questions)
 
 ## Deployed
-https://cosmic-records.herokuapp.com/
+[https://cosmic-repo.onrender.com](https://cosmic-repo.onrender.com)
 
 ## Installation 
 npm install
